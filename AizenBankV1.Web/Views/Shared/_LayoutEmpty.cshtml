@@ -1,0 +1,25 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AizenBank - @ViewBag.Title</title>
+    @Styles.Render("~/bundles/template/bootstrap/css")
+    @Styles.Render("~/bundles/style/css")
+    @Styles.Render("~/bundles/font-awesome/css")
+    @Scripts.Render("~/bundles/style/js")
+
+    @Scripts.Render("~/bundles/jquery/js")
+    @Scripts.Render("~/bundles/gulpfile/js")
+
+    @if (IsSectionDefined("Styles"))
+    {
+        @RenderSection("Styles", required: false)
+    }
+
+    @Styles.Render("~/bundles/main/css")
+</head>
+<body class="bg-gradient-primary">
+    @RenderBody()
+</body>
