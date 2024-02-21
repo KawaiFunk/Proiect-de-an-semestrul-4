@@ -1,9 +1,21 @@
-﻿<!-- Sidebar - Brand -->
+﻿@using System.Web.Optimization
+
+<!-- Sidebar - Brand -->
 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
     <div class="sidebar-brand-icon rotate-n-15">
         <i class="fas fa-laugh-wink"></i>
     </div>
     <div class="sidebar-brand-text mx-3">Aizen Bank</div>
+
+    @Styles.Render("~/bundles/template/bootstrap/css")
+    @Styles.Render("~/bundles/style/css")
+    @Styles.Render("~/bundles/font-awesome/css")
+    @Scripts.Render("~/bundles/style/js")
+
+    @Scripts.Render("~/bundles/jquery/js")
+    @Scripts.Render("~/bundles/gulpfile/js")
+
+    @Styles.Render("~/bundles/main/css")
 </a>
 
 <!-- Divider -->

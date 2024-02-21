@@ -18,7 +18,7 @@ namespace AizenBankV1.Web
            AreaRegistration.RegisterAllAreas();
            RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            BundleConfig.RegisterBundle(BundleTable.Bundles);
+           BundleConfig.RegisterBundle(BundleTable.Bundles);
         }
     }
 }
