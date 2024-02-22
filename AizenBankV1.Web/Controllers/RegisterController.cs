@@ -11,10 +11,15 @@ namespace AizenBankV1.Web.Controllers
         // GET: Register
         public ActionResult LogIn()
         {
-            return LogIn();
+            return View();
         }
 
         public ActionResult Register()
+        {
+            return View();
+        }
+
+        public ActionResult ForgotPassword()
         {
             return View();
         }
