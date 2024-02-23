@@ -13,5 +13,20 @@ namespace AizenBankV1.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult Profile()
+        {
+            return View();
+        }
+
+        public ActionResult ActivityLog()
+        {
+            return View();
+        }
+
+        public ActionResult Settings()
+        {
+            return View();
+        }
     }
 }

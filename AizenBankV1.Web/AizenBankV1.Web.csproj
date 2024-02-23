@@ -231,6 +231,9 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Views\Shared\_LogoutModal.cshtml" />
     <Content Include="Views\Register\ForgotPassword.cshtml" />
+    <Content Include="Views\Home\Profile.cshtml" />
+    <Content Include="Views\Home\ActivityLog.cshtml" />
+    <Content Include="Views\Home\Settings.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
