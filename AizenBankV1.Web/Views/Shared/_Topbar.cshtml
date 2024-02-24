@@ -1,5 +1,5 @@
 ﻿@using System.Web.Optimization 
-
+@model AizenBankV1.Web.Models.UserData
 <!-- Topbar Navbar -->
 <ul class="navbar-nav ml-auto">
 
@@ -84,9 +84,9 @@
     <li class="nav-item dropdown no-arrow">
         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Ichigo Kurosaki</span>
+            <span class="mr-2 d-none d-lg-inline text-gray-600 small">@Html.DisplayFor(user => user.Name)</span>
             <img class="img-profile rounded-circle"
-                 src="img/undraw_profile.svg">
+                 src="Template/img/undraw_profile.svg">
 
         </a>
         <!-- Dropdown - User Information -->
