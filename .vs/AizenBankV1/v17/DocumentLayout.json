@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\shared\\_topbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\shared\\_topbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|d:\\github repositories\\proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\models\\cardinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\models\\cardinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\home\\cardsaccounts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\home\\cardsaccounts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "AizenBankV1.Web\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-05T09:42:50.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CardInfo.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Models\\CardInfo.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Models\\CardInfo.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Models\\CardInfo.cs",
+              "RelativeToolTip": "AizenBankV1.Web\\Models\\CardInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T09:42:49.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Sidebar.cshtml",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Shared\\_Sidebar.cshtml",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeToolTip": "AizenBankV1.Web\\Views\\Shared\\_Sidebar.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002242|",
+              "WhenOpened": "2024-03-05T09:42:49.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Topbar.cshtml",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Shared\\_Topbar.cshtml",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Shared\\_Topbar.cshtml",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Shared\\_Topbar.cshtml",
+              "RelativeToolTip": "AizenBankV1.Web\\Views\\Shared\\_Topbar.cshtml",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAFgAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-05T09:42:49.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CardsAccounts.cshtml",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Home\\CardsAccounts.cshtml",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Home\\CardsAccounts.cshtml",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Home\\CardsAccounts.cshtml",
+              "RelativeToolTip": "AizenBankV1.Web\\Views\\Home\\CardsAccounts.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002242|",
+              "WhenOpened": "2024-03-05T09:42:50.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "AizenBankV1.Web\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T09:42:50.933Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
