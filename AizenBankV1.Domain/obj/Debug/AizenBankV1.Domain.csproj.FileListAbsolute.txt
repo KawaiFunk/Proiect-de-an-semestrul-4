@@ -1,0 +1,9 @@
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Domain\bin\Debug\AizenBankV1.Domain.dll
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Domain\bin\Debug\AizenBankV1.Domain.pdb
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Domain\bin\Debug\AizenBankV1.Helpers.dll
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Domain\bin\Debug\AizenBankV1.Helpers.pdb
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Domain\obj\Debug\AizenBankV1.Domain.csproj.AssemblyReference.cache
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Domain\obj\Debug\AizenBankV1.Domain.csproj.CoreCompileInputs.cache
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Domain\obj\Debug\AizenBan.D36A81D3.Up2Date
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Domain\obj\Debug\AizenBankV1.Domain.dll
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Domain\obj\Debug\AizenBankV1.Domain.pdb

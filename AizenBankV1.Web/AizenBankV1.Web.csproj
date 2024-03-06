@@ -196,6 +196,7 @@
     </Compile>
     <Compile Include="Models\CardInfo.cs" />
     <Compile Include="Models\UserData.cs" />
+    <Compile Include="Models\UserLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -246,6 +247,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AizenBankV1.BusinessLogic\AizenBankV1.BusinessLogic.csproj">
+      <Project>{14e78f0b-445a-41be-ba7e-feb081463440}</Project>
+      <Name>AizenBankV1.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AizenBankV1.Domain\AizenBankV1.Domain.csproj">
+      <Project>{cc4f7ed8-4358-4971-9268-adeff95fde46}</Project>
+      <Name>AizenBankV1.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
