@@ -12,6 +12,7 @@ namespace AizenBankV1.BusinessLogic.Core
     {
         public ULogInResponce RLogInUpService(ULoginData data)
         {
+            //SQL DATA
             return new ULogInResponce { Status = false };
         }
     }
