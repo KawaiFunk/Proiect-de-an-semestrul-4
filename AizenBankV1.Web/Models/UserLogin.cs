@@ -9,7 +9,5 @@ namespace AizenBankV1.Web.Models
     {
         public string Credentials { get; set; }
         public string Password { get; set; }
-        public string LogInIP { get; set; }
-        public DateTime LogInFateTime { get; set; }
     }
 }

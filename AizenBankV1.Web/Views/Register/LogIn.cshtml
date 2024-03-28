@@ -2,65 +2,69 @@
     ViewBag.Title = "LogIn";
     Layout = "~/Views/Shared/_LayoutEmpty.cshtml";
 }
+@model AizenBankV1.Web.Models.UserLogin
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-<div class="container">
+</head>
+<body>
+    <div class="container">
 
-    <!-- Outer Row -->
-    <div class="row justify-content-center">
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
 
-        <div class="col-xl-10 col-lg-12 col-md-9">
+            <div class="col-xl-10 col-lg-12 col-md-9">
 
-            <div class="card o-hidden border-0 shadow-lg my-5">
-                <div class="card-body p-0">
-                    <!-- Nested Row within Card Body -->
-                    <div class="row">
-                        <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                        <div class="col-lg-6">
-                            <div class="p-5">
-                                <!-- Invisible space element -->
-                                <div style="height: 60px; visibility: hidden;"></div>
-                                <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
-                                </div>
-                                <div style="height: 30px; visibility: hidden;"></div>
-                                <form class="user">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control form-control-user"
-                                               id="exampleInputEmail" aria-describedby="emailHelp"
-                                               placeholder="Enter Email Address...">
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <!-- Invisible space element -->
+                                    <div style="height: 60px; visibility: hidden;"></div>
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control form-control-user"
-                                               id="exampleInputPassword" placeholder="Password">
+                                    <div style="height: 30px; visibility: hidden;"></div>
+                                    @Html.ValidationSummary(true)
+                                    @using (Html.BeginForm("LogIn", "Register", FormMethod.Post))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        <form method="post">
+
+                                            <label for="Credential">Username</label>
+                                            @Html.TextBoxFor(UserLogin => UserLogin.Credentials, new { @class = "form-control", placeholder = "Email or Phone", maxlength = "10" })
+                                            @Html.ValidationMessageFor(UserLogin => UserLogin.Credentials, "", new { @class = "text-danger" })
+
+                                            <label for="Password">Password</label>
+                                            @Html.PasswordFor(UserLogin => UserLogin.Password, new { @class = "form-control", placeholder = "Password" })
+                                            @Html.ValidationMessageFor(UserLogin => UserLogin.Password, "", new { @class = "text-danger" })
+
+                                            <hr />
+                                            <div class="log-in">
+                                                <button type="submit" class="btn btn-primary btn-user btn-block">Log In</button>
+                                                <!-- Directory Link -->
+                                                <a href="@Url.Action("Index", "Home")"></a>
+                                            </div><br>
+
+
+                                            <div class="sign-in">
+                                                <small><a href="@Url.Action("Register", "Register")">Create Account</a></small>
+                                            </div>
+
+                                        </form>
+                                    }
                                     </div>
-                                    <div class="form-group">
-                                        <div class="custom-control custom-checkbox small">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck">
-                                            <label class="custom-control-label" for="customCheck">
-                                                Remember
-                                                Me
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <a href="@Url.Action("Index", "Home")" class="btn btn-primary btn-user btn-block">
-                                        Login
-                                    </a>
-                                </form>
-                                <hr>
-                                <div class="text-center">
-                                    <a class="small" href="@Url.Action("ForgotPassword", "Register")">Forgot Password?</a>
-                                </div>
-                                <div class="text-center">
-                                    <a class="small" href="@Url.Action("Register", "Register")">Create an Account!</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
+</body>
+</html>
 
-    </div>
-
-</div>

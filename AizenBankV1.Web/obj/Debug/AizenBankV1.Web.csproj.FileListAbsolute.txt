@@ -124,3 +124,8 @@ D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\AizenBankV1
 D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\AizenBankV1.Domain.dll
 D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\AizenBankV1.BusinessLogic.pdb
 D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\AizenBankV1.Domain.pdb
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\EntityFramework.dll
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\EntityFramework.SqlServer.dll
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\AizenBankV1.BusinessLogic.dll.config
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\EntityFramework.xml
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\EntityFramework.SqlServer.xml

@@ -36,9 +36,7 @@ namespace AizenBankV1.Web.Controllers
                 ULoginData data = new ULoginData
                 {
                     Credentials = login.Credentials,
-                    Password = login.Password,
-                    LogInIP = login.LogInIP,
-                    LogInDateTime = DateTime.Now
+                    Password = login.Password
                 };
 
                 ULogInResponce resp = _session.UserLoginAction(data);

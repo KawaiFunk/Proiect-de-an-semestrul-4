@@ -9,3 +9,7 @@ D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.BusinessLogic\bin\D
 D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.BusinessLogic\obj\Debug\AizenBan.388F7C11.Up2Date
 D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.BusinessLogic\obj\Debug\AizenBankV1.BusinessLogic.dll
 D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.BusinessLogic\obj\Debug\AizenBankV1.BusinessLogic.pdb
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.BusinessLogic\bin\Debug\EntityFramework.dll
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.BusinessLogic\bin\Debug\EntityFramework.xml
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
