@@ -11,5 +11,6 @@ namespace AizenBankV1.BusinessLogic.Interfaces
     public interface ISession
     {
         ULogInResponce UserLoginAction(ULoginData data);
+        URegisterResponce UserRegisterAction(URegisterData data);
     }
 }

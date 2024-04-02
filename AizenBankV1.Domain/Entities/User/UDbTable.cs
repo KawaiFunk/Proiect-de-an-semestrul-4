@@ -17,12 +17,12 @@ namespace AizenBankV1.Domain.Entities.User
 
         [Required]
         [Display(Name = "UserName")]
-        [StringLength(30, MinimumLength = 6, ErrorMessage = "UserName cannot be longer than 30 characters")]
+        [StringLength(30, MinimumLength = 3, ErrorMessage = "UserName cannot be longer than 30 characters")]
         public string UserName { get; set; }
 
         [Required]
         [Display(Name = "Password")]
-        [StringLength(50, MinimumLength = 8, ErrorMessage = "Password cannot be shorter than 8 characters")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Password cannot be shorter than 8 characters")]
         public string Password { get; set; }
 
         [Required]

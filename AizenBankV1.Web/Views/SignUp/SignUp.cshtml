@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_LayoutEmpty.cshtml";
+}
+
+@model AizenBankV1.Web.Models.UserRegister
+
+<div class="container">
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+                <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                <div class="col-lg-7">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">Create an Aizen Bank account!</h1>
+                        </div>
+                        @Html.ValidationSummary(true)
+                        @using (Html.BeginForm("SignUp", "SignUp", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <label for="Credential">Name</label>
+                            @Html.TextBoxFor(m => m.Credentials, new { @class = "form-control", placeholder = "Username", maxlength = "10" })
+                            @Html.ValidationMessageFor(m => m.Credentials, "", new { @class = "text-danger" })
+
+                            <label for="Email">Email</label>
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email or Phone", maxlength = "10" })
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+
+                            <label for="Password">Password</label>
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+
+                            <hr/>
+
+                            <button type="submit" class="btn btn-primary btn-user btn-block">
+                                Register Account
+                            </button>
+                        }
+
+                        <div class="text-center">
+                            <a class="small" href="@Url.Action("LogIn", "Register")">Already have an account? Login!</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

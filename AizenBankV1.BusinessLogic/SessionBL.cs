@@ -16,5 +16,10 @@ namespace AizenBankV1.BusinessLogic
         {
             return RLogInUpService(data);
         }
+
+        public URegisterResponce UserRegisterAction(URegisterData data)
+        {
+            return RRegisterUpService(data);
+        }
     }
 }

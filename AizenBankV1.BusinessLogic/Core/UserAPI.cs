@@ -26,5 +26,25 @@ namespace AizenBankV1.BusinessLogic.Core
             }
             return new ULogInResponce { Status = false };
         }
+
+        public URegisterResponce RRegisterUpService(URegisterData data)
+        {
+            var newUser = new UDbTable();
+            newUser.Id = 1232;
+            newUser.UserName = data.UserName;
+            newUser.Password = data.Password;
+            newUser.Email = data.Email;
+            newUser.LastLogin = DateTime.Now;
+            newUser.Level = Domain.Enums.URole.user;
+            newUser.LasIp = "data.LasIp";
+
+            using (var db = new UserContext())
+            {
+                db.Users.Add(newUser);
+                db.SaveChanges();
+            }
+
+            return new URegisterResponce { Status = true };
+        }
     }
 }
