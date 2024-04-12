@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AizenBankV1.Domain.Entities.User;
+using AizenBankV1.Web.Models;
+using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,10 +18,13 @@ namespace AizenBankV1.Web
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup
-           AreaRegistration.RegisterAllAreas();
            RouteConfig.RegisterRoutes(RouteTable.Routes);
 
            BundleConfig.RegisterBundle(BundleTable.Bundles);
+            Mapper.Initialize(cfg => {
+                cfg.CreateMap<UDbTable, UserMinimal>();
+                cfg.CreateMap<UserLogin, ULoginData>();
+            });
         }
     }
 }

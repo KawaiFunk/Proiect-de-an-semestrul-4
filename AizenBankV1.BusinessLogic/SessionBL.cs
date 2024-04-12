@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace AizenBankV1.BusinessLogic
 {
@@ -20,6 +21,16 @@ namespace AizenBankV1.BusinessLogic
         public URegisterResponce UserRegisterAction(URegisterData data)
         {
             return RRegisterUpService(data);
+        }
+
+        public HttpCookie GenCookie(string loginCredential)
+        {
+            return Cookie(loginCredential);
+        }
+
+        public UserMinimal GetUserByCookie(string apiCookieValue)
+        {
+            return UserCookie(apiCookieValue);
         }
     }
 }

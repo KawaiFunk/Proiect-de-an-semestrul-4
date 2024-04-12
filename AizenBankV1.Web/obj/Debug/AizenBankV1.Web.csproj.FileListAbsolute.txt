@@ -129,3 +129,12 @@ D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\EntityFrame
 D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\AizenBankV1.BusinessLogic.dll.config
 D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\EntityFramework.xml
 D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\EntityFramework.SqlServer.xml
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\AutoMapper.dll
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\System.ValueTuple.dll
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\System.Web.Services.Description.dll
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\AizenBankV1.Helpers.dll
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\AutoMapper.pdb
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\AutoMapper.xml
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\System.ValueTuple.xml
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\System.Web.Services.Description.pdb
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Web\bin\AizenBankV1.Helpers.pdb

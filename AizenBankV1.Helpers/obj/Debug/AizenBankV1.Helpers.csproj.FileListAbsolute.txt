@@ -4,3 +4,11 @@ D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Helpers\obj\Debug\A
 D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Helpers\obj\Debug\AizenBankV1.Helpers.csproj.CoreCompileInputs.cache
 D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Helpers\obj\Debug\AizenBankV1.Helpers.dll
 D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Helpers\obj\Debug\AizenBankV1.Helpers.pdb
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Helpers\bin\Debug\AutoMapper.dll
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Helpers\bin\Debug\System.ValueTuple.dll
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Helpers\bin\Debug\System.Web.Services.Description.dll
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Helpers\bin\Debug\AutoMapper.pdb
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Helpers\bin\Debug\AutoMapper.xml
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Helpers\bin\Debug\System.ValueTuple.xml
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Helpers\bin\Debug\System.Web.Services.Description.pdb
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.Helpers\obj\Debug\AizenBan.077158C7.Up2Date

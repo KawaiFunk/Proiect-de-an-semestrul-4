@@ -36,13 +36,24 @@ namespace AizenBankV1.Web.Controllers
                 {
                     UserName = registers.Credentials,
                     Password = registers.Password,
-                    Email = registers.Email
+                    Email = registers.Email,
+                    LasIp = Request.UserHostAddress,
+                    LastLogin = DateTime.Now,
+                    Level = Domain.Enums.URole.user
                 };
 
                 URegisterResponce resp = _session.UserRegisterAction(data);
                 if (resp.Status)
                 {
-                    //Add Cookie
+                    ULoginData user = new ULoginData
+                    {
+                        Credentials = data.UserName,
+                        Password = data.Password
+                    };
+
+                    _session.UserLoginAction(user);
+                    HttpCookie cookie = _session.GenCookie(user.Credentials);
+                    ControllerContext.HttpContext.Response.Cookies.Add(cookie);
 
                     return RedirectToAction("Index", "Home");
                 }
