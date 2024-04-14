@@ -27,16 +27,27 @@ namespace AizenBankV1.Web.AdminAttributes
             if (apiCookie != null)
             {
                 var profile = _sessionBussinesLogic.GetUserByCookie(apiCookie.Value);
-                if (profile != null && profile.Level != URole.admin)
+                if (profile == null)
+                {
+                    filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "Register", action = "LogIn" }));
+                }
+
+                if(profile.Level != URole.admin)
+                {
+                    filterContext.Result = new RedirectToRouteResult(
+                        new RouteValueDictionary(
+                            new { controller = "Home", action = "Index" }));
+                }
+
+                if (profile.Level == URole.admin)
                 {
                     HttpContext.Current.SetMySessionObject(profile);
                 }
-                else
-                {
-                    filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new {controller = "Home", action = "Settings"}));
-                }
             }
-
+            else
+            {
+                filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "Register", action = "LogIn" }));
+            }
         }
     }
 }

@@ -29,7 +29,7 @@ namespace AizenBankV1.BusinessLogic.Core
             if (user != null)
             {
                 var hashedPassword = LoginHelper.HashGen(data.Password);
-                if (user.Password == hashedPassword)
+                if (user!= null && user.Password == hashedPassword)
                 {
                     using (var db = new UserContext())
                     {
@@ -41,15 +41,15 @@ namespace AizenBankV1.BusinessLogic.Core
 
 
                     if (user.Level == URole.user)
-                        return new ULogInResponce { Status = true };
+                        return new ULogInResponce { Status = true , Message = "user"};
                     else
                          if (user.Level == URole.admin)
-                        return new ULogInResponce { Status = true };
+                        return new ULogInResponce { Status = true , Message = "admin" };
                 }
             }
 
             // Authentication failed
-            return new ULogInResponce { Status = false };
+            return new ULogInResponce { Status = false , Message = "none"};
         }
 
         public URegisterResponce RRegisterUpService(URegisterData data)
@@ -69,7 +69,7 @@ namespace AizenBankV1.BusinessLogic.Core
                 newUser.Email = data.Email;
                 newUser.LastLogin = DateTime.Now;
                 newUser.Level = Domain.Enums.URole.user;
-                newUser.LasIp = "data.LasIp";
+                newUser.LasIp = "0.0.0.0";
 
                 db.Users.Add(newUser);
                 db.SaveChanges();

@@ -11,6 +11,7 @@ using System.Web.Mvc;
 using AizenBankV1.Domain.Entities.Responces;
 using System.Data;
 using System.Web.Security;
+using AutoMapper;
 
 namespace AizenBankV1.Web.Controllers
 {
@@ -51,6 +52,8 @@ namespace AizenBankV1.Web.Controllers
         {
             Session.Abandon();
             FormsAuthentication.SignOut();
+
+            HttpContext.Session["UserProfile"] = login;
             if (Response.Cookies["X-KEY"] != null)
             {
                 var cookie = new HttpCookie("X-KEY")
@@ -63,13 +66,11 @@ namespace AizenBankV1.Web.Controllers
 
             if (ModelState.IsValid)
             {
-                ULoginData data = new ULoginData
-                {
-                    Credentials = login.Credentials,
-                    Password = login.Password,
-                    LogInDateTime = DateTime.Now,
-                    LogInIP = Request.UserHostAddress
-                };
+
+                var data = Mapper.Map<ULoginData>(login);
+                data.LogInIP = Request.UserHostAddress;
+                data.LogInDateTime = DateTime.Now;
+
 
                 ULogInResponce resp = _session.UserLoginAction(data);
                 if (resp.Status)

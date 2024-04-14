@@ -8,8 +8,8 @@ namespace AizenBankV1.Domain.Enums
 {
     public enum URole
     {
-        none,
-        admin,
-        user
+        none = 0,
+        user = 1,
+        admin = 2
     }
 }

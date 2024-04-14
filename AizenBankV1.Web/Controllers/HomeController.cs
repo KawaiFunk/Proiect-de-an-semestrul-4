@@ -33,23 +33,51 @@ namespace AizenBankV1.Web.Controllers
 
         public ActionResult Profile()
         {
-            return View();
+            var user = System.Web.HttpContext.Current.GetMySessionObject();
+            UserData userData = new UserData
+            {
+                Name = user.Username,
+                Email = user.Email
+            };
+
+            return View(userData);
         }
 
         public ActionResult ActivityLog()
         {
-            return View();
+            var user = System.Web.HttpContext.Current.GetMySessionObject();
+            UserData userData = new UserData
+            {
+                Name = user.Username,
+                Email = user.Email
+            };
+
+            return View(userData);
         }
 
         public ActionResult Settings()
         {
-            return View();
+            var user = System.Web.HttpContext.Current.GetMySessionObject();
+            UserData userData = new UserData
+            {
+                Name = user.Username,
+                Email = user.Email
+            };
+
+            return View(userData);
         }
 
-        
+        [AdminModAttributes]
         public ActionResult CardsAccounts()
         {
-            return View();
+            var user = System.Web.HttpContext.Current.GetMySessionObject();
+            UserData userData = new UserData
+            {
+                Name = user.Username,
+                Email = user.Email
+            };
+
+            return View(userData);
         }
     }
 }
