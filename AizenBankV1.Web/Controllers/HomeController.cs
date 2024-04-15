@@ -1,4 +1,5 @@
-﻿using AizenBankV1.Web.AdminAttributes;
+﻿using AizenBankV1.BusinessLogic.DBModel.Seed;
+using AizenBankV1.Web.AdminAttributes;
 using AizenBankV1.Web.Extensions;
 using AizenBankV1.Web.Models;
 using System;
@@ -11,7 +12,7 @@ namespace AizenBankV1.Web.Controllers
 {
     public class HomeController : BaseController
     {
-        
+        private readonly UserContext _userContext;
         // GET: Home
         public ActionResult Index()
         {
@@ -78,6 +79,14 @@ namespace AizenBankV1.Web.Controllers
             };
 
             return View(userData);
+        }
+
+        public ActionResult Tables()
+        {
+            var users = _userContext.Users.ToList();
+
+            // Pass user account information to the view
+            return View(users);
         }
     }
 }

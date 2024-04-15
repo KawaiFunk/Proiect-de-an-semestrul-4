@@ -12,22 +12,17 @@ namespace AizenBankV1.Web.CheckAcces
         public static bool IsUserAdmin()
         {
             // Check if the user is authenticated
-            if (HttpContext.Current.User.Identity.IsAuthenticated)
-            {
                 // Assuming you have a User model with a Role property
                 var currentUser = HttpContext.Current.GetMySessionObject(); // Assuming this gives the username
 
-                using (var db = new UserContext())
+                if(currentUser.Level == Domain.Enums.URole.admin)
                 {
-                    var user = db.Users.FirstOrDefault(u => u.UserName == currentUser.Username);
-
-                    // Check if the user exists and has the admin role
-                    if (user != null && user.Level == Domain.Enums.URole.admin)
-                    {
-                        return true;
-                    }
+                    return true;
                 }
-            }
+                else
+                {
+                    return false;
+                }
 
             return false; // Default to false if not authenticated or not an admin
         }
