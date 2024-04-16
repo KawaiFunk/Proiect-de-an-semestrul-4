@@ -297,6 +297,7 @@
     <Content Include="Views\Home\CardsAccounts.cshtml" />
     <Content Include="Views\SignUp\SignUp.cshtml" />
     <Content Include="Views\Home\Tables.cshtml" />
+    <Content Include="Views\Shared\_LayoutSidebarOnly.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

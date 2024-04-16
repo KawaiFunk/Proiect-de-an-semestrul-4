@@ -83,10 +83,25 @@ namespace AizenBankV1.Web.Controllers
 
         public ActionResult Tables()
         {
-            var users = _userContext.Users.ToList();
+            List<UserData> allUsers = GetAllUsers();
 
-            // Pass user account information to the view
-            return View(users);
+            // Pass the list of users to the view
+            return View(allUsers);
+        }
+
+        List<UserData> GetAllUsers()
+        {
+            // Perform a database query to retrieve all users
+            // This might vary depending on your database technology (e.g., Entity Framework, ADO.NET)
+            // Here's a pseudo example assuming Entity Framework
+            using (var dbContext = new UserContext())
+            {
+                return dbContext.Users.Select(u => new UserData
+                {
+                    Name = u.UserName,
+                    Email = u.Email
+                }).ToList();
+            }
         }
     }
 }
