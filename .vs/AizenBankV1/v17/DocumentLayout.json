@@ -3,28 +3,72 @@
   "WorkspaceRootPath": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|d:\\github repositories\\proiect-de-an-semestrul-4\\aizenbankv1.web\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|d:\\github repositories\\proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\home\\tables.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\home\\tables.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|d:\\github repositories\\proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\admin\\edituserinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\admin\\edituserinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|d:\\github repositories\\proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\admin\\tables.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\admin\\tables.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|d:\\github repositories\\proiect-de-an-semestrul-4\\aizenbankv1.businesslogic\\bussinesslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|solutionrelative:aizenbankv1.businesslogic\\bussinesslogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|d:\\github repositories\\proiect-de-an-semestrul-4\\aizenbankv1.businesslogic\\sessions\\adminsessionbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|solutionrelative:aizenbankv1.businesslogic\\sessions\\adminsessionbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|d:\\github repositories\\proiect-de-an-semestrul-4\\aizenbankv1.businesslogic\\interfaces\\isessionadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|solutionrelative:aizenbankv1.businesslogic\\interfaces\\isessionadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.businesslogic\\interfaces\\isession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|solutionrelative:aizenbankv1.businesslogic\\interfaces\\isession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|d:\\github repositories\\proiect-de-an-semestrul-4\\aizenbankv1.businesslogic\\core\\adminapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|solutionrelative:aizenbankv1.businesslogic\\core\\adminapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\signup\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\signup\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\controllers\\signupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\controllers\\signupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\shared\\_topbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\shared\\_topbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|d:\\github repositories\\proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\shared\\_layoutsidebaronly.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\checkacces\\isadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\checkacces\\isadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\register\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\register\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\shared\\_layoutsidebaronly.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\shared\\_layoutsidebaronly.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\controllers\\signupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\controllers\\signupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,20 +94,150 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "_LayoutSidebarOnly.cshtml",
-              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Shared\\_LayoutSidebarOnly.cshtml",
-              "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Shared\\_LayoutSidebarOnly.cshtml",
-              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Shared\\_LayoutSidebarOnly.cshtml",
-              "RelativeToolTip": "AizenBankV1.Web\\Views\\Shared\\_LayoutSidebarOnly.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAADYAAAAMAAAA",
+              "DocumentIndex": 7,
+              "Title": "AdminAPI.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Core\\AdminAPI.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.BusinessLogic\\Core\\AdminAPI.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Core\\AdminAPI.cs",
+              "RelativeToolTip": "AizenBankV1.BusinessLogic\\Core\\AdminAPI.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAADwvzMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T19:02:31.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ISessionAdmin.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Interfaces\\ISessionAdmin.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.BusinessLogic\\Interfaces\\ISessionAdmin.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Interfaces\\ISessionAdmin.cs",
+              "RelativeToolTip": "AizenBankV1.BusinessLogic\\Interfaces\\ISessionAdmin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T18:57:53.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SignUp.cshtml",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\SignUp\\SignUp.cshtml",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\SignUp\\SignUp.cshtml",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\SignUp\\SignUp.cshtml",
+              "RelativeToolTip": "AizenBankV1.Web\\Views\\SignUp\\SignUp.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABcAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-16T13:40:53.819Z",
+              "WhenOpened": "2024-04-18T16:19:03.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EditUserInfo.cshtml",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Admin\\EditUserInfo.cshtml",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Admin\\EditUserInfo.cshtml",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Admin\\EditUserInfo.cshtml",
+              "RelativeToolTip": "AizenBankV1.Web\\Views\\Admin\\EditUserInfo.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-18T16:45:04.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ISession.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Interfaces\\ISession.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.BusinessLogic\\Interfaces\\ISession.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Interfaces\\ISession.cs",
+              "RelativeToolTip": "AizenBankV1.BusinessLogic\\Interfaces\\ISession.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-17T16:17:20.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminSessionBL.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Sessions\\AdminSessionBL.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.BusinessLogic\\Sessions\\AdminSessionBL.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Sessions\\AdminSessionBL.cs",
+              "RelativeToolTip": "AizenBankV1.BusinessLogic\\Sessions\\AdminSessionBL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T19:00:13.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BussinessLogic.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\BussinessLogic.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.BusinessLogic\\BussinessLogic.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\BussinessLogic.cs",
+              "RelativeToolTip": "AizenBankV1.BusinessLogic\\BussinessLogic.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T19:04:14.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "AizenBankV1.Web\\Controllers\\AdminController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAwwDIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T18:56:26.222Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Tables.cshtml",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Admin\\Tables.cshtml",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Admin\\Tables.cshtml",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Admin\\Tables.cshtml",
+              "RelativeToolTip": "AizenBankV1.Web\\Views\\Admin\\Tables.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACoAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-14T16:21:04.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SignUpController.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Controllers\\SignUpController.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Controllers\\SignUpController.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Controllers\\SignUpController.cs",
+              "RelativeToolTip": "AizenBankV1.Web\\Controllers\\SignUpController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T15:10:25.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "AizenBankV1.Web\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBoAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T16:19:57.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "_Topbar.cshtml",
               "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Shared\\_Topbar.cshtml",
               "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Shared\\_Topbar.cshtml",
@@ -76,54 +250,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SignUpController.cs",
-              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Controllers\\SignUpController.cs",
-              "RelativeDocumentMoniker": "AizenBankV1.Web\\Controllers\\SignUpController.cs",
-              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Controllers\\SignUpController.cs",
-              "RelativeToolTip": "AizenBankV1.Web\\Controllers\\SignUpController.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAABIAAAAqAAAA",
+              "DocumentIndex": 13,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\App_Start\\RouteConfig.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "AizenBankV1.Web\\App_Start\\RouteConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T15:10:25.165Z",
+              "WhenOpened": "2024-04-18T16:55:10.958Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Tables.cshtml",
-              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Home\\Tables.cshtml",
-              "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Home\\Tables.cshtml",
-              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Home\\Tables.cshtml",
-              "RelativeToolTip": "AizenBankV1.Web\\Views\\Home\\Tables.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB4AAAAjAAAA",
+              "DocumentIndex": 12,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "AizenBankV1.Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAwCcAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-14T16:21:04.703Z",
+              "WhenOpened": "2024-04-18T16:57:42.681Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "AizenBankV1.Web\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "AizenBankV1.Web\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAgwA4AAAAyAAAA",
+              "DocumentIndex": 14,
+              "Title": "IsAdmin.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\CheckAcces\\IsAdmin.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\CheckAcces\\IsAdmin.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\CheckAcces\\IsAdmin.cs",
+              "RelativeToolTip": "AizenBankV1.Web\\CheckAcces\\IsAdmin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T16:19:57.689Z",
+              "WhenOpened": "2024-04-18T07:44:38.093Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Sidebar.cshtml",
-              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Shared\\_Sidebar.cshtml",
-              "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Shared\\_Sidebar.cshtml",
-              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Shared\\_Sidebar.cshtml",
-              "RelativeToolTip": "AizenBankV1.Web\\Views\\Shared\\_Sidebar.cshtml",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAHsAAAAbAAAA",
+              "DocumentIndex": 16,
+              "Title": "_LayoutSidebarOnly.cshtml",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Shared\\_LayoutSidebarOnly.cshtml",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Shared\\_LayoutSidebarOnly.cshtml",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Shared\\_LayoutSidebarOnly.cshtml",
+              "RelativeToolTip": "AizenBankV1.Web\\Views\\Shared\\_LayoutSidebarOnly.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAADYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-14T14:21:27.158Z",
+              "WhenOpened": "2024-04-16T13:40:53.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LogIn.cshtml",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Register\\LogIn.cshtml",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Register\\LogIn.cshtml",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Register\\LogIn.cshtml",
+              "RelativeToolTip": "AizenBankV1.Web\\Views\\Register\\LogIn.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB8AAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-16T21:31:50.548Z",
               "EditorCaption": ""
             }
           ]

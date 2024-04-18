@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_LayoutSidebarOnly.cshtml";
 }
 
-@model List<AizenBankV1.Web.Models.UserData>
+@model List<AizenBankV1.Domain.Entities.User.UserMinimal>
 
 
 <div class="container-fluid">
@@ -23,18 +23,27 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
+                                    <th>ID</th>
                                     <th>Username</th>
                                     <th>Email</th>
-                                    <!-- Add more columns as needed -->
+                                    <th>Last login</th>
+                                    <th>Last IP</th>
+                                    <th>Level</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach (var user in Model)
                                 {
                                     <tr>
-                                        <td>@user.Name</td>
+                                        <td>@user.Id</td>
+                                        <td>@user.Username</td>
                                         <td>@user.Email</td>
-                                        <!-- Add more cells as needed -->
+                                        <td>@user.LastLogin</td>
+                                        <td>@user.LasIp</td>
+                                        <td>@user.Level</td>
+                                        <td>
+                                            <button onclick="location.href='@Url.Action("EditUserInfo", "Admin", new { id = user.Id })'" class="edit">Edit</button>
+                                        </td>
                                     </tr>
                                 }
                             </tbody>

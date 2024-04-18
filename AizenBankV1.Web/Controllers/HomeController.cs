@@ -1,4 +1,7 @@
-﻿using AizenBankV1.BusinessLogic.DBModel.Seed;
+﻿using AizenBankV1.BusinessLogic;
+using AizenBankV1.BusinessLogic.DBModel.Seed;
+using AizenBankV1.BusinessLogic.Interfaces;
+using AizenBankV1.Domain.Entities.User;
 using AizenBankV1.Web.AdminAttributes;
 using AizenBankV1.Web.Extensions;
 using AizenBankV1.Web.Models;
@@ -12,6 +15,13 @@ namespace AizenBankV1.Web.Controllers
 {
     public class HomeController : BaseController
     {
+        private readonly ISession _session;
+        public HomeController()
+        {
+            var bl = new BussinessLogic();
+            _session = bl.GetSessionBL();
+        }
+
         private readonly UserContext _userContext;
         // GET: Home
         public ActionResult Index()
@@ -68,7 +78,6 @@ namespace AizenBankV1.Web.Controllers
             return View(userData);
         }
 
-        [AdminModAttributes]
         public ActionResult CardsAccounts()
         {
             var user = System.Web.HttpContext.Current.GetMySessionObject();
@@ -81,27 +90,6 @@ namespace AizenBankV1.Web.Controllers
             return View(userData);
         }
 
-        public ActionResult Tables()
-        {
-            List<UserData> allUsers = GetAllUsers();
-
-            // Pass the list of users to the view
-            return View(allUsers);
-        }
-
-        List<UserData> GetAllUsers()
-        {
-            // Perform a database query to retrieve all users
-            // This might vary depending on your database technology (e.g., Entity Framework, ADO.NET)
-            // Here's a pseudo example assuming Entity Framework
-            using (var dbContext = new UserContext())
-            {
-                return dbContext.Users.Select(u => new UserData
-                {
-                    Name = u.UserName,
-                    Email = u.Email
-                }).ToList();
-            }
-        }
+        
     }
 }

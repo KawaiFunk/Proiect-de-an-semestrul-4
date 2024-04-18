@@ -13,5 +13,10 @@ namespace AizenBankV1.BusinessLogic
         {
             return new SessionBL();
         } 
+
+        public ISessionAdmin GetAdminSessionBL() 
+        {
+            return new AdminSessionBL();
+        }
     }
 }

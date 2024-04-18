@@ -21,32 +21,67 @@ namespace AizenBankV1.BusinessLogic.Core
         {
 
             UDbTable user;
-            using (var db = new UserContext())
+            var validate = new EmailAddressAttribute();
+            if (validate.IsValid(data.Credentials))
             {
-                user = db.Users.FirstOrDefault(us => us.UserName == data.Credentials);
-            }
-
-            if (user != null)
-            {
-                var hashedPassword = LoginHelper.HashGen(data.Password);
-                if (user!= null && user.Password == hashedPassword)
+                using (var db = new UserContext())
                 {
-                    using (var db = new UserContext())
+                    user = db.Users.FirstOrDefault(us => us.Email == data.Credentials);
+                }
+
+                if (user != null)
+                {
+                    var hashedPassword = LoginHelper.HashGen(data.Password);
+                    if (user != null && user.Password == hashedPassword)
                     {
-                        user.LasIp = data.LogInIP;
-                        user.LastLogin = data.LogInDateTime;
-                        db.Entry(user).State = EntityState.Modified;
-                        //db.SaveChanges();
+                        using (var db = new UserContext())
+                        {
+                            user.LasIp = data.LogInIP;
+                            user.LastLogin = data.LogInDateTime;
+                            db.Entry(user).State = EntityState.Modified;
+                            //db.SaveChanges();
+                        }
+
+
+                        if (user.Level == URole.user)
+                            return new ULogInResponce { Status = true, Message = "user" };
+                        else
+                             if (user.Level == URole.admin)
+                            return new ULogInResponce { Status = true, Message = "admin" };
                     }
-
-
-                    if (user.Level == URole.user)
-                        return new ULogInResponce { Status = true , Message = "user"};
-                    else
-                         if (user.Level == URole.admin)
-                        return new ULogInResponce { Status = true , Message = "admin" };
                 }
             }
+            else
+            {
+                using (var db = new UserContext())
+                {
+                    user = db.Users.FirstOrDefault(us => us.UserName == data.Credentials);
+                }
+
+                if (user != null)
+                {
+                    var hashedPassword = LoginHelper.HashGen(data.Password);
+                    if (user != null && user.Password == hashedPassword)
+                    {
+                        using (var db = new UserContext())
+                        {
+                            user.LasIp = data.LogInIP;
+                            user.LastLogin = data.LogInDateTime;
+                            db.Entry(user).State = EntityState.Modified;
+                            //db.SaveChanges();
+                        }
+
+
+                        if (user.Level == URole.user)
+                            return new ULogInResponce { Status = true, Message = "user" };
+                        else
+                             if (user.Level == URole.admin)
+                            return new ULogInResponce { Status = true, Message = "admin" };
+                    }
+                }
+            }
+
+            
 
             // Authentication failed
             return new ULogInResponce { Status = false , Message = "none"};
@@ -148,5 +183,7 @@ namespace AizenBankV1.BusinessLogic.Core
 
             return userminimal;
         }
+
+        
     }
 }

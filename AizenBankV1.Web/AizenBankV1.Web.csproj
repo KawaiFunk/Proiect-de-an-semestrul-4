@@ -265,6 +265,7 @@
     <Compile Include="AdminAttributes\AdminModAttributes.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="CheckAcces\IsAdmin.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
@@ -296,8 +297,9 @@
     <Content Include="Views\Home\Settings.cshtml" />
     <Content Include="Views\Home\CardsAccounts.cshtml" />
     <Content Include="Views\SignUp\SignUp.cshtml" />
-    <Content Include="Views\Home\Tables.cshtml" />
+    <Content Include="Views\Admin\Tables.cshtml" />
     <Content Include="Views\Shared\_LayoutSidebarOnly.cshtml" />
+    <Content Include="Views\Admin\EditUserInfo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

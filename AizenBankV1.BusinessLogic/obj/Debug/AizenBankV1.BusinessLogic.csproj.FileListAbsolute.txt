@@ -20,3 +20,4 @@ D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.BusinessLogic\bin\D
 D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.BusinessLogic\bin\Debug\AutoMapper.xml
 D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.BusinessLogic\bin\Debug\System.ValueTuple.xml
 D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.BusinessLogic\bin\Debug\System.Web.Services.Description.pdb
+D:\GitHub Repositories\Proiect-de-an-semestrul-4\AizenBankV1.BusinessLogic\bin\Debug\AizenBankV1.BusinessLogic.dll.config

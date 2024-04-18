@@ -22,11 +22,11 @@
                             @Html.AntiForgeryToken()
 
                             <label for="Credential">Name</label>
-                            @Html.TextBoxFor(m => m.Credentials, new { @class = "form-control", placeholder = "Username", maxlength = "10" })
+                            @Html.TextBoxFor(m => m.Credentials, new { @class = "form-control", placeholder = "Username", maxlength = "20" })
                             @Html.ValidationMessageFor(m => m.Credentials, "", new { @class = "text-danger" })
 
                             <label for="Email">Email</label>
-                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email or Phone", maxlength = "10" })
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email or Phone", maxlength = "30" })
                             @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
 
                             <label for="Password">Password</label>
