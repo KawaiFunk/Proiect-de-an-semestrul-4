@@ -25,5 +25,10 @@ namespace AizenBankV1.BusinessLogic
         {
             REditUser(id, user);
         }
+
+        public void DeleteUser(int id)
+        {
+            RDeleteUser(id);
+        }
     }
 }

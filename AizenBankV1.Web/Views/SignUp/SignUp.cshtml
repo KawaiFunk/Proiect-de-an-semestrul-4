@@ -16,24 +16,39 @@
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">Create an Aizen Bank account!</h1>
                         </div>
+
+                        @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+                        {
+                            <div class="alert alert-danger" role="alert">
+                                @ViewBag.ErrorMessage
+                            </div>
+                        }
+
                         @Html.ValidationSummary(true)
                         @using (Html.BeginForm("SignUp", "SignUp", FormMethod.Post))
                         {
                             @Html.AntiForgeryToken()
 
-                            <label for="Credential">Name</label>
-                            @Html.TextBoxFor(m => m.Credentials, new { @class = "form-control", placeholder = "Username", maxlength = "20" })
-                            @Html.ValidationMessageFor(m => m.Credentials, "", new { @class = "text-danger" })
+                            <div>
+                                <label for="Credential">Name</label>
+                                @Html.TextBoxFor(m => m.Credentials, new { @class = "form-control", placeholder = "Username", maxlength = "20" })
+                                @Html.ValidationMessageFor(m => m.Credentials, "", new { @class = "text-danger" })
+                            </div>
 
-                            <label for="Email">Email</label>
-                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email or Phone", maxlength = "30" })
-                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                            <div>
+                                <label for="Email">Email</label>
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email", maxlength = "30" })
+                                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                            </div>
 
-                            <label for="Password">Password</label>
-                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
-                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                            <div>
+                                <label for="Password">Password</label>
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                            </div>
 
-                            <hr/>
+
+                            <hr />
 
                             <button type="submit" class="btn btn-primary btn-user btn-block">
                                 Register Account
@@ -44,8 +59,8 @@
                             <a class="small" href="@Url.Action("LogIn", "Register")">Already have an account? Login!</a>
                         </div>
                     </div>
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
 </div>

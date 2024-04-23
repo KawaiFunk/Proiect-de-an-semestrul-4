@@ -12,5 +12,6 @@ namespace AizenBankV1.BusinessLogic.Interfaces
         List<UserMinimal> RGetAllUsers();
         UserMinimal RGetUserById(int id);
         void EditUser(int id, UserMinimal user);
+        void DeleteUser(int id);
     }
 }

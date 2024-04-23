@@ -12,6 +12,7 @@ using AizenBankV1.Domain.Entities.Responces;
 using System.Data;
 using System.Web.Security;
 using AutoMapper;
+using Microsoft.Win32;
 
 namespace AizenBankV1.Web.Controllers
 {
@@ -83,8 +84,8 @@ namespace AizenBankV1.Web.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", resp.ActionStatusMsg);
-                    return View();
+                    ViewBag.ErrorMessage = "Username or password is incorrect.";
+                    return View(login);
                 }
             }
 

@@ -23,8 +23,11 @@
             @Html.TextBoxFor(m => m.Email)
             @Html.ValidationMessageFor(m => m.Email)
             <label for="Level">Level</label>
-            @Html.TextBoxFor(m => m.Level)
-            @Html.ValidationMessageFor(m => m.Level)
+            @Html.DropDownListFor(m => m.Level, new SelectList(new[]
+            {
+                new SelectListItem { Text = "Admin", Value = "Admin" },
+                new SelectListItem { Text = "User", Value = "User" },
+            }, "Value", "Text"), new { @class = "dropdown" })
             <button type="submit" class="accept">Edit</button>
             <button onclick="location.href='/';return false;" class="cancel">Cancel</button>
         }

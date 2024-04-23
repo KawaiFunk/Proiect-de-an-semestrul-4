@@ -39,7 +39,6 @@ namespace AizenBankV1.BusinessLogic.Core
                             user.LasIp = data.LogInIP;
                             user.LastLogin = data.LogInDateTime;
                             db.Entry(user).State = EntityState.Modified;
-                            //db.SaveChanges();
                         }
 
 
@@ -91,9 +90,10 @@ namespace AizenBankV1.BusinessLogic.Core
         {
             using (var db = new UserContext())
             {
-                bool existingUser = db.Users.Any(u => u.UserName == data.UserName);
+                bool existingUsername = db.Users.Any(u => u.UserName == data.UserName);
+                bool existingEmail = db.Users.Any(u => u.Email == data.Email);
 
-                if (existingUser)
+                if (existingUsername || existingEmail)
                 {
                     return new URegisterResponce { Status = false };
                 }

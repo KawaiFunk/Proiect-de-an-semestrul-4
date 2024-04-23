@@ -57,5 +57,17 @@ namespace AizenBankV1.BusinessLogic.Core
                 dbContext.SaveChanges();
             }
         }
+
+        public void RDeleteUser(int id)
+        {
+            using (var dbContext = new UserContext())
+            {
+                var user = dbContext.Users.FirstOrDefault(u => u.Id == id);
+                if (user == null) return;
+
+                dbContext.Users.Remove(user);
+                dbContext.SaveChanges();
+            }
+        }
     }
 }

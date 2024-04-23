@@ -59,8 +59,8 @@ namespace AizenBankV1.Web.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", resp.ActionStatusMsg);
-                    return View();
+                    ViewBag.ErrorMessage = "Username or email is already in use.";
+                    return View(registers);
                 }
             }
 

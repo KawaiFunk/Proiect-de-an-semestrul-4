@@ -44,6 +44,7 @@ namespace AizenBankV1.Web.Controllers
             }
         }
 
+        [AdminModAttributes]
         [HttpPost]
         [Route("Admin/EditUserInfo/{id}")]
         [ValidateAntiForgeryToken]
@@ -55,6 +56,20 @@ namespace AizenBankV1.Web.Controllers
                 return RedirectToAction("Tables");
             }
             return View("EditUserInfo", userModel); 
+        }
+
+        [AdminModAttributes]
+        [HttpPost]
+        [Route("Admin/DeleteUser/{id}")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteUser(int id)
+        {
+            if (ModelState.IsValid)
+            {
+                _session.DeleteUser(id);
+                return RedirectToAction("Tables");
+            }
+            return RedirectToAction("Tables");
         }
     }
 }
