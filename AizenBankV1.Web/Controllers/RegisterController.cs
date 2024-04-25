@@ -15,6 +15,7 @@ using AutoMapper;
 using Microsoft.Win32;
 using AizenBankV1.BusinessLogic.DBModel.Seed;
 using AizenBankV1.Helpers;
+using System.ComponentModel.DataAnnotations;
 
 namespace AizenBankV1.Web.Controllers
 {
@@ -103,12 +104,29 @@ namespace AizenBankV1.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult ForgotPassword([Bind(Include = "Credentials")] UserLogin input)
         {
-            if (input.Credentials != null)
+
+            var validate = new EmailAddressAttribute();
+            if(input.Credentials == null)
             {
-                string code = _session.SendCode(input.Credentials);
-                TempData["Email"] = input.Credentials;
-                TempData["code"] = code;
+                ViewBag.ErrorMessage = "You didn't introduce an email";
+                return View("ForgotPassword");
             }
+
+            if (!validate.IsValid(input.Credentials))
+            {
+                ViewBag.ErrorMessage = "Invalid email format";
+                return View("ForgotPassword");
+            }
+
+            if (!_session.UserExists(input.Credentials))
+            {
+                ViewBag.ErrorMessage = "Email is not existent";
+                return View("ForgotPassword");
+            }
+
+            string code = _session.SendCode(input.Credentials);
+            TempData["Email"] = input.Credentials;
+            TempData["code"] = code;
             return RedirectToAction("ConfirmCode", "Register");
         }
 
@@ -126,7 +144,6 @@ namespace AizenBankV1.Web.Controllers
             string code = input.Code;
             UDbTable user;
 
-            // Check if the verification code matches the one sent
             if (code != null && code.Equals(verificationCode))
             {
                 using (var db = new UserContext())
@@ -135,7 +152,6 @@ namespace AizenBankV1.Web.Controllers
                 }
                 if (user != null)
                 {
-                    // If the user is found, proceed to the ResetPassword action
                     return RedirectToAction("ResetPassword", new { email = email });
                 }
                 else
@@ -170,15 +186,11 @@ namespace AizenBankV1.Web.Controllers
 
                 if (model.NewPassword == model.ConfirmPassword)
                 {
-                    // Access email from the model
                     var user = _dbContext.Users.FirstOrDefault(u => u.Email == email);
 
                     if (user != null)
                     {
-                        string encryptedPassword = LoginHelper.HashGen(model.NewPassword); // Use the new password from the model
-                        user.Password = encryptedPassword;
-                        _dbContext.SaveChanges();
-
+                        _session.ChangePassword(model.NewPassword, email);
                         return RedirectToAction("LogIn", "Register");
                     }
                     else
@@ -191,7 +203,6 @@ namespace AizenBankV1.Web.Controllers
                     ViewBag.ErrorMessage = "Passwords do not match.";
                 }
 
-            // Return the view with the model to display validation errors
             return View(model);
         }
 

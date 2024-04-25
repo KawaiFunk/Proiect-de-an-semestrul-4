@@ -13,6 +13,7 @@ using AizenBankV1.Helpers;
 using AizenBankV1.Domain.Session;
 using AutoMapper;
 using proiect.Helpers;
+using System.Web.Configuration;
 
 namespace AizenBankV1.BusinessLogic.Core
 {
@@ -191,6 +192,27 @@ namespace AizenBankV1.BusinessLogic.Core
             SendEmail.SendEmailCode(input, code);
             return code;
         }
-        
+
+        public void RChangePassword(string pass, string email)
+        {
+            using (var db = new UserContext())
+            {
+                var user = db.Users.FirstOrDefault(u => u.Email == email);
+                string encryptedPassword = LoginHelper.HashGen(pass);
+                user.Password = encryptedPassword;
+                db.SaveChanges();
+            }
+        }
+
+        public bool RUserExists(string email)
+        {
+            using (var db = new UserContext())
+            {
+                var user = db.Users.FirstOrDefault(u => u.Email == email);
+                if (user == null) return false;
+            }
+            return true;
+        }
+
     }
 }

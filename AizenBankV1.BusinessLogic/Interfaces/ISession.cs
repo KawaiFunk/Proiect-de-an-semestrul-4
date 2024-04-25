@@ -16,5 +16,7 @@ namespace AizenBankV1.BusinessLogic.Interfaces
         HttpCookie GenCookie(string loginCredential);
         UserMinimal GetUserByCookie(string value);
         string SendCode(string password);
+        void ChangePassword(string pass, string email);
+        bool UserExists(string email);
     }
 }

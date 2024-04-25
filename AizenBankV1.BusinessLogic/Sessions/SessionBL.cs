@@ -37,6 +37,16 @@ namespace AizenBankV1.BusinessLogic
         {
             return RSendCode(input);
         }
-        
+
+        public void ChangePassword(string pass, string email)
+        {
+            RChangePassword(pass, email);
+        }
+
+        public bool UserExists(string email)
+        {
+            return RUserExists(email);
+        }
+
     }
 }
