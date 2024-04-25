@@ -7,12 +7,60 @@
       "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|d:\\github repositories\\proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\register\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C67FFCC9-28F5-4834-BDF1-6615B6E6E3E7}|AizenBankV1.Helpers\\AizenBankV1.Helpers.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.helpers\\sendemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C67FFCC9-28F5-4834-BDF1-6615B6E6E3E7}|AizenBankV1.Helpers\\AizenBankV1.Helpers.csproj|solutionrelative:aizenbankv1.helpers\\sendemail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\register\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\register\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\register\\confirmcode.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\register\\confirmcode.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\register\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\register\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\register\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\register\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|d:\\github repositories\\proiect-de-an-semestrul-4\\aizenbankv1.businesslogic\\core\\userapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\models\\verificationcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\models\\verificationcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\models\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\models\\forgotpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.businesslogic\\core\\userapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|solutionrelative:aizenbankv1.businesslogic\\core\\userapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.businesslogic\\interfaces\\isession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|solutionrelative:aizenbankv1.businesslogic\\interfaces\\isession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.businesslogic\\sessions\\sessionbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|solutionrelative:aizenbankv1.businesslogic\\sessions\\sessionbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C67FFCC9-28F5-4834-BDF1-6615B6E6E3E7}|AizenBankV1.Helpers\\AizenBankV1.Helpers.csproj|d:\\github repositories\\proiect-de-an-semestrul-4\\aizenbankv1.helpers\\generatepasscode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C67FFCC9-28F5-4834-BDF1-6615B6E6E3E7}|AizenBankV1.Helpers\\AizenBankV1.Helpers.csproj|solutionrelative:aizenbankv1.helpers\\generatepasscode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.businesslogic\\core\\adminapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14E78F0B-445A-41BE-BA7E-FEB081463440}|AizenBankV1.BusinessLogic\\AizenBankV1.BusinessLogic.csproj|solutionrelative:aizenbankv1.businesslogic\\core\\adminapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.web\\views\\admin\\edituserinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B36578D5-52FF-4E53-9DA0-111770D141BE}|AizenBankV1.Web\\AizenBankV1.Web.csproj|solutionrelative:aizenbankv1.web\\views\\admin\\edituserinfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC4F7ED8-4358-4971-9268-ADEFF95FDE46}|AizenBankV1.Domain\\AizenBankV1.Domain.csproj|D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\aizenbankv1.domain\\entities\\card\\cdbtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC4F7ED8-4358-4971-9268-ADEFF95FDE46}|AizenBankV1.Domain\\AizenBankV1.Domain.csproj|solutionrelative:aizenbankv1.domain\\entities\\card\\cdbtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,35 +92,191 @@
               "RelativeDocumentMoniker": "AizenBankV1.Web\\Controllers\\RegisterController.cs",
               "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Controllers\\RegisterController.cs",
               "RelativeToolTip": "AizenBankV1.Web\\Controllers\\RegisterController.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAIwE0AAAARAAAA",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAqwGkAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T18:01:12.016Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
+              "Title": "ISession.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Interfaces\\ISession.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.BusinessLogic\\Interfaces\\ISession.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Interfaces\\ISession.cs",
+              "RelativeToolTip": "AizenBankV1.BusinessLogic\\Interfaces\\ISession.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T16:30:50.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserAPI.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Core\\UserAPI.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.BusinessLogic\\Core\\UserAPI.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Core\\UserAPI.cs",
+              "RelativeToolTip": "AizenBankV1.BusinessLogic\\Core\\UserAPI.cs",
+              "ViewState": "AQIAAJsAAAAAAAAAAAAhwL4AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T10:43:15.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ForgotPassword.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Models\\ForgotPassword.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Models\\ForgotPassword.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Models\\ForgotPassword.cs",
+              "RelativeToolTip": "AizenBankV1.Web\\Models\\ForgotPassword.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T16:23:32.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConfirmCode.cshtml",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Register\\ConfirmCode.cshtml",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Register\\ConfirmCode.cshtml",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Register\\ConfirmCode.cshtml",
+              "RelativeToolTip": "AizenBankV1.Web\\Views\\Register\\ConfirmCode.cshtml",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwCcAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-25T16:50:11.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ResetPassword.cshtml",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Register\\ResetPassword.cshtml",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Register\\ResetPassword.cshtml",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Register\\ResetPassword.cshtml",
+              "RelativeToolTip": "AizenBankV1.Web\\Views\\Register\\ResetPassword.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAwDQAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-25T16:57:43.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ForgotPassword.cshtml",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Register\\ForgotPassword.cshtml",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Register\\ForgotPassword.cshtml",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Register\\ForgotPassword.cshtml",
+              "RelativeToolTip": "AizenBankV1.Web\\Views\\Register\\ForgotPassword.cshtml",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBoAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-25T16:22:34.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "LogIn.cshtml",
               "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Register\\LogIn.cshtml",
               "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Register\\LogIn.cshtml",
               "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Register\\LogIn.cshtml",
               "RelativeToolTip": "AizenBankV1.Web\\Views\\Register\\LogIn.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACQAAAAuAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAAwEkAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-23T18:00:45.874Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserAPI.cs",
-              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Core\\UserAPI.cs",
-              "RelativeDocumentMoniker": "AizenBankV1.BusinessLogic\\Core\\UserAPI.cs",
-              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Core\\UserAPI.cs",
-              "RelativeToolTip": "AizenBankV1.BusinessLogic\\Core\\UserAPI.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAAAAGMAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "SendEmail.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Helpers\\SendEmail.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.Helpers\\SendEmail.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Helpers\\SendEmail.cs",
+              "RelativeToolTip": "AizenBankV1.Helpers\\SendEmail.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T10:43:15.341Z",
+              "WhenOpened": "2024-04-25T16:43:26.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SessionBL.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Sessions\\SessionBL.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.BusinessLogic\\Sessions\\SessionBL.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Sessions\\SessionBL.cs",
+              "RelativeToolTip": "AizenBankV1.BusinessLogic\\Sessions\\SessionBL.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAqwA0AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T16:28:41.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GeneratePasscode.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Helpers\\GeneratePasscode.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.Helpers\\GeneratePasscode.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Helpers\\GeneratePasscode.cs",
+              "RelativeToolTip": "AizenBankV1.Helpers\\GeneratePasscode.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T18:23:33.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AdminAPI.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Core\\AdminAPI.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.BusinessLogic\\Core\\AdminAPI.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.BusinessLogic\\Core\\AdminAPI.cs",
+              "RelativeToolTip": "AizenBankV1.BusinessLogic\\Core\\AdminAPI.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAgwAoAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T12:38:13.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VerificationCode.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Models\\VerificationCode.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Models\\VerificationCode.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Models\\VerificationCode.cs",
+              "RelativeToolTip": "AizenBankV1.Web\\Models\\VerificationCode.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T16:53:03.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CDbTable.cs",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Domain\\Entities\\Card\\CDbTable.cs",
+              "RelativeDocumentMoniker": "AizenBankV1.Domain\\Entities\\Card\\CDbTable.cs",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Domain\\Entities\\Card\\CDbTable.cs",
+              "RelativeToolTip": "AizenBankV1.Domain\\Entities\\Card\\CDbTable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T13:04:20.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EditUserInfo.cshtml",
+              "DocumentMoniker": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Admin\\EditUserInfo.cshtml",
+              "RelativeDocumentMoniker": "AizenBankV1.Web\\Views\\Admin\\EditUserInfo.cshtml",
+              "ToolTip": "D:\\GitHub Repositories\\Proiect-de-an-semestrul-4\\AizenBankV1.Web\\Views\\Admin\\EditUserInfo.cshtml",
+              "RelativeToolTip": "AizenBankV1.Web\\Views\\Admin\\EditUserInfo.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-24T14:05:29.954Z",
               "EditorCaption": ""
             }
           ]

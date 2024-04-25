@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using AizenBankV1.Helpers;
 using AizenBankV1.Domain.Session;
 using AutoMapper;
+using proiect.Helpers;
 
 namespace AizenBankV1.BusinessLogic.Core
 {
@@ -184,6 +185,12 @@ namespace AizenBankV1.BusinessLogic.Core
             return userminimal;
         }
 
+        public string RSendCode(string input)
+        {
+            string code = GeneratePasscode.Generate(6);
+            SendEmail.SendEmailCode(input, code);
+            return code;
+        }
         
     }
 }

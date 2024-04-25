@@ -1,9 +1,9 @@
-﻿@model AizenBankV1.Web.Models.UserLogin
-
-@{
-    ViewBag.Title = "Forgot Password";
+﻿@{
+    ViewBag.Title = "Confirm Code";
     Layout = "~/Views/Shared/_LayoutEmpty.cshtml";
 }
+
+@model AizenBankV1.Web.Models.VerificationCode
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +18,7 @@
                     <div class="card-body p-0">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Forgot Your Password?</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Confirm Code</h1>
                             </div>
 
                             @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
@@ -28,13 +28,13 @@
                                 </div>
                             }
 
-                            @using (Html.BeginForm("ForgotPassword", "Register", FormMethod.Post))
+                            @using (Html.BeginForm("ConfirmCode", "Register", FormMethod.Post))
                             {
                                 @Html.AntiForgeryToken()
 
-                                <label for="Credential">Enter Your Email</label>
-                                @Html.TextBoxFor(model => model.Credentials, new { @class = "form-control", placeholder = "Email or Phone", maxlength = "20" })
-                                @Html.ValidationMessageFor(model => model.Credentials, "", new { @class = "text-danger" })
+                                <label for="Code">Enter the Verification Code</label>
+                                @Html.TextBoxFor(model => model.Code, new { @class = "form-control", placeholder = "Verification Code", maxlength = "20" })
+                                @Html.ValidationMessageFor(model => model.Code, "", new { @class = "text-danger" })
 
                                 <button type="submit" class="btn btn-primary btn-user btn-block">Submit</button>
                             }

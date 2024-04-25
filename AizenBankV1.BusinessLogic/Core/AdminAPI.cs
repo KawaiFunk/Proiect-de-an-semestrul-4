@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AizenBankV1.BusinessLogic.Core
 {
-    internal class AdminAPI
+    internal class AdminAPI : UserAPI
     {
         public List<UserMinimal> RGetAllUsers()
         {

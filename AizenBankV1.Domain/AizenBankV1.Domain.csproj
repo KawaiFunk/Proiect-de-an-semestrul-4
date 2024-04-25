@@ -88,6 +88,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Card\CDbTable.cs" />
     <Compile Include="Entities\Responces\ULogInResponce.cs" />
     <Compile Include="Entities\Responces\URegisterResponce.cs" />
     <Compile Include="Entities\User\UDbTable.cs" />

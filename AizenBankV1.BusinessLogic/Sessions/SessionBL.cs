@@ -33,6 +33,10 @@ namespace AizenBankV1.BusinessLogic
             return UserCookie(apiCookieValue);
         }
 
+        public string SendCode(string input)
+        {
+            return RSendCode(input);
+        }
         
     }
 }

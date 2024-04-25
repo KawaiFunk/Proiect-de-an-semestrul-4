@@ -13,6 +13,8 @@ using System.Data;
 using System.Web.Security;
 using AutoMapper;
 using Microsoft.Win32;
+using AizenBankV1.BusinessLogic.DBModel.Seed;
+using AizenBankV1.Helpers;
 
 namespace AizenBankV1.Web.Controllers
 {
@@ -91,18 +93,108 @@ namespace AizenBankV1.Web.Controllers
 
             return View();
         }
-            
-        
-
-
-        public ActionResult Register()
-        {
-            return View();
-        }
 
         public ActionResult ForgotPassword()
         {
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ForgotPassword([Bind(Include = "Credentials")] UserLogin input)
+        {
+            if (input.Credentials != null)
+            {
+                string code = _session.SendCode(input.Credentials);
+                TempData["Email"] = input.Credentials;
+                TempData["code"] = code;
+            }
+            return RedirectToAction("ConfirmCode", "Register");
+        }
+
+        public ActionResult ConfirmCode()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ConfirmCode([Bind(Include = "Code")] VerificationCode input)
+        {
+            string email = TempData["Email"] as string;
+            string verificationCode = TempData["code"] as string;
+            string code = input.Code;
+            UDbTable user;
+
+            // Check if the verification code matches the one sent
+            if (code != null && code.Equals(verificationCode))
+            {
+                using (var db = new UserContext())
+                {
+                    user = db.Users.FirstOrDefault(u => u.Email == email);
+                }
+                if (user != null)
+                {
+                    // If the user is found, proceed to the ResetPassword action
+                    return RedirectToAction("ResetPassword", new { email = email });
+                }
+                else
+                {
+                    ViewBag.ErrorMessage = "User not found.";
+                    return View("ForgotPassword");
+                }
+            }
+            else
+            {
+                TempData.Remove("Email");
+                TempData.Remove("code");
+
+                TempData["ErrorMessage"] = "Incorrect verification code.";
+                return RedirectToAction("ForgotPassword", "Register");
+            }
+        }
+
+
+        public ActionResult ResetPassword()
+        {
+            ViewBag.ErrorMessage = TempData["ErrorMessage"] as string;
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ResetPassword(ForgotPassword model)
+        {
+                var _dbContext = new UserContext();
+                string email = TempData["Email"] as string;
+
+                if (model.NewPassword == model.ConfirmPassword)
+                {
+                    // Access email from the model
+                    var user = _dbContext.Users.FirstOrDefault(u => u.Email == email);
+
+                    if (user != null)
+                    {
+                        string encryptedPassword = LoginHelper.HashGen(model.NewPassword); // Use the new password from the model
+                        user.Password = encryptedPassword;
+                        _dbContext.SaveChanges();
+
+                        return RedirectToAction("LogIn", "Register");
+                    }
+                    else
+                    {
+                        ViewBag.ErrorMessage = "User not found.";
+                    }
+                }
+                else
+                {
+                    ViewBag.ErrorMessage = "Passwords do not match.";
+                }
+
+            // Return the view with the model to display validation errors
+            return View(model);
+        }
+
+
     }
 }

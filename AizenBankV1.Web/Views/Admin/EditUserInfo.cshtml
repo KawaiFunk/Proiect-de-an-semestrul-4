@@ -29,7 +29,7 @@
                 new SelectListItem { Text = "User", Value = "User" },
             }, "Value", "Text"), new { @class = "dropdown" })
             <button type="submit" class="accept">Edit</button>
-            <button onclick="location.href='/';return false;" class="cancel">Cancel</button>
+            <button onclick="location.href=@Url.Action("Tables","Admin");return false;" class="cancel">Cancel</button>
         }
 
     </div>

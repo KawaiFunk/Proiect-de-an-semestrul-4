@@ -274,9 +274,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ForgotPassword.cs" />
     <Compile Include="Models\UserData.cs" />
     <Compile Include="Models\UserLogin.cs" />
     <Compile Include="Models\UserRegister.cs" />
+    <Compile Include="Models\VerificationCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -300,6 +302,8 @@
     <Content Include="Views\Admin\Tables.cshtml" />
     <Content Include="Views\Shared\_LayoutSidebarOnly.cshtml" />
     <Content Include="Views\Admin\EditUserInfo.cshtml" />
+    <Content Include="Views\Register\ConfirmCode.cshtml" />
+    <Content Include="Views\Register\ResetPassword.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -319,6 +323,10 @@
     <ProjectReference Include="..\AizenBankV1.Domain\AizenBankV1.Domain.csproj">
       <Project>{cc4f7ed8-4358-4971-9268-adeff95fde46}</Project>
       <Name>AizenBankV1.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AizenBankV1.Helpers\AizenBankV1.Helpers.csproj">
+      <Project>{c67ffcc9-28f5-4834-bdf1-6615b6e6e3e7}</Project>
+      <Name>AizenBankV1.Helpers</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
