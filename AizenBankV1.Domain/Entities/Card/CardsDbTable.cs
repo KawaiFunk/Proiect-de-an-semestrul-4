@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AizenBankV1.Domain.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,10 +8,13 @@ using System.Threading.Tasks;
 
 namespace AizenBankV1.Domain.Entities.Card
 {
-    public class CDbTable
+    public class CardsDBTable
     {
-        [Key]
+        [Required]
         public int Id { get; set; }
+
+        [Required]
+        public int userID { get; set; }
 
         [Required]
         public DateTime ExpireDate { get; set; }
@@ -22,6 +26,9 @@ namespace AizenBankV1.Domain.Entities.Card
         public string Description { get; set; }
 
         [Required]
-        public int MoneyAmount { get; set; }
+        public double MoneyAmount { get; set; }
+
+        [Required]
+        public CardTypes CardType { get; set; }
     }
 }

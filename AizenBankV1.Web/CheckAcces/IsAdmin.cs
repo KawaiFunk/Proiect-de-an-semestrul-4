@@ -11,18 +11,16 @@ namespace AizenBankV1.Web.CheckAcces
     {
         public static bool IsUserAdmin()
         {
-                var currentUser = HttpContext.Current.GetMySessionObject();
+            var currentUser = HttpContext.Current.GetMySessionObject();
 
-                if(currentUser.Level == Domain.Enums.URole.admin)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-
-            return false;
+            if(currentUser.Level == Domain.Enums.URole.admin)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

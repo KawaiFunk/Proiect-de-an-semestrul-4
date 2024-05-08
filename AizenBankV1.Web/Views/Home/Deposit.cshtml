@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Deposit";
+}
+
+@model AizenBankV1.Web.Models.DepositDataModel
+
+@Html.ValidationSummary(true)
+@using (Html.BeginForm("Deposit", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+<form method="post">
+
+    <label>Card Number:</label>
+    <input></input>
+
+    <label>Expire Date:</label>
+    <input></input>
+
+    <label>Name of owner:</label>
+    <input></input>
+
+    <label>CVV:</label>
+    <input></input>
+
+    <label>Amount:</label>
+    @Html.TextBoxFor(m => m.Money, new { @class = "form-control", placeholder = "Amount" })
+    @Html.ValidationMessageFor(m => m.Money, "", new { @class = "text-danger" })
+
+    <label for="SelectedCardName">Destination Card:</label>
+    @Html.DropDownListFor(m => m.SelectedCardName, new SelectList(Model.UserCards, "Name", "Name"), "Select a Card", new { @class = "dropdown", id = "SelectedCardName" })
+    @Html.ValidationMessageFor(m => m.SelectedCardName, "", new { @class = "text-danger" })
+
+    <button type="submit">Confirm</button>
+</form>
+}

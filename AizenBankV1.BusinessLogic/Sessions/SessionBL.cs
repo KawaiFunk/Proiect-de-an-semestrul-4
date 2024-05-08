@@ -1,7 +1,9 @@
 ﻿using AizenBankV1.BusinessLogic.Core;
 using AizenBankV1.BusinessLogic.Interfaces;
+using AizenBankV1.Domain.Entities.Card;
 using AizenBankV1.Domain.Entities.Responces;
 using AizenBankV1.Domain.Entities.User;
+using AizenBankV1.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,5 +50,19 @@ namespace AizenBankV1.BusinessLogic
             return RUserExists(email);
         }
 
+        public List<CardMinimal> GetCards(UserMinimal user)
+        {
+            return RGetCards(user);
+        }
+
+        public void CreateCard(CardMinimal cardInfo, UserMinimal user)
+        {
+            RCreateCard(cardInfo, user);
+        }
+
+        public void Deposit(DepositData data)
+        {
+            RDeposit(data);
+        }
     }
 }

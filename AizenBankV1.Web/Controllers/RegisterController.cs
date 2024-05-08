@@ -54,6 +54,7 @@ namespace AizenBankV1.Web.Controllers
 
         public ActionResult LogIn(UserLogin login)
         {
+            ViewBag.ErrorMessage = "";
             Session.Abandon();
             FormsAuthentication.SignOut();
 
@@ -104,7 +105,7 @@ namespace AizenBankV1.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult ForgotPassword([Bind(Include = "Credentials")] UserLogin input)
         {
-
+            ViewBag.ErrorMessage = "";
             var validate = new EmailAddressAttribute();
             if(input.Credentials == null)
             {
@@ -139,6 +140,7 @@ namespace AizenBankV1.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult ConfirmCode([Bind(Include = "Code")] VerificationCode input)
         {
+            ViewBag.ErrorMessage = "";
             string email = TempData["Email"] as string;
             string verificationCode = TempData["code"] as string;
             string code = input.Code;
@@ -181,27 +183,28 @@ namespace AizenBankV1.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult ResetPassword(ForgotPassword model)
         {
-                var _dbContext = new UserContext();
-                string email = TempData["Email"] as string;
+            ViewBag.ErrorMessage = "";
+            var _dbContext = new UserContext();
+            string email = TempData["Email"] as string;
 
-                if (model.NewPassword == model.ConfirmPassword)
+            if (model.NewPassword == model.ConfirmPassword)
+            {
+                var user = _dbContext.Users.FirstOrDefault(u => u.Email == email);
+
+                if (user != null)
                 {
-                    var user = _dbContext.Users.FirstOrDefault(u => u.Email == email);
-
-                    if (user != null)
-                    {
-                        _session.ChangePassword(model.NewPassword, email);
-                        return RedirectToAction("LogIn", "Register");
-                    }
-                    else
-                    {
-                        ViewBag.ErrorMessage = "User not found.";
-                    }
+                    _session.ChangePassword(model.NewPassword, email);
+                    return RedirectToAction("LogIn", "Register");
                 }
                 else
                 {
-                    ViewBag.ErrorMessage = "Passwords do not match.";
+                    ViewBag.ErrorMessage = "User not found.";
                 }
+            }
+            else
+            {
+                ViewBag.ErrorMessage = "Passwords do not match.";
+            }
 
             return View(model);
         }

@@ -24,6 +24,7 @@ namespace AizenBankV1.Web.Controllers
         [AdminModAttributes]
         public ActionResult Tables()
         {
+            SessionStatus();
             List<UserMinimal> allUsers = _session.RGetAllUsers();
             return View(allUsers);
         }
@@ -33,6 +34,7 @@ namespace AizenBankV1.Web.Controllers
         [Route("Admin/EditUserInfo/{id}")]
         public ActionResult EditUserInfo(int id)
         {
+            SessionStatus();
             var userFromDB = _session.RGetUserById(id);
             if (userFromDB == null)
             {
@@ -50,6 +52,7 @@ namespace AizenBankV1.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult EditUserInfoConfirm(int id, UserMinimal userModel)
         {
+            SessionStatus();
             if (ModelState.IsValid)
             {
                 _session.EditUser(id, userModel);
@@ -64,6 +67,7 @@ namespace AizenBankV1.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteUser(int id)
         {
+            SessionStatus();
             if (ModelState.IsValid)
             {
                 _session.DeleteUser(id);

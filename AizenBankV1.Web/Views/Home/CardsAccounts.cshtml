@@ -2,5 +2,167 @@
     ViewBag.Title = "Cards & Accounts";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model List<AizenBankV1.Domain.Entities.Card.CardMinimal>
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Grid</title>
+    <style>
+        #editButton {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            margin: 0;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        #editButton img {
+            display: block;
+        }
+
+
+        #editButton:hover {
+            background-color: rgb(9, 15, 15);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .container {
+            position: relative;
+            background-color: black;
+            background-image: linear-gradient(#a82599, 10%, #224abe 100%);
+            background-size: cover;
+            padding: 25px;
+            border-radius: 28px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            color: white;
+            height: 300px;
+        }
+
+        .container-edit {
+            position: relative;
+            background-color: black;
+            background-image: linear-gradient(#2c2b2c, 10%, #4d4e52 100%);
+            background-size: cover;
+            padding: 25px;
+            border-radius: 28px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            color: white;
+            height: 300px;
+        }
+
+        .logo img {
+            width: 48px;
+            margin-right: 10px;
+        }
+
+        h5 {
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .card-details {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        h5.number {
+            margin-top: 4px;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        h5.name {
+            margin-top: 20px;
+        }
+
+        .edit {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .edit img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .edit:hover {
+                background-color: rgb(9, 15, 15);
+            }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        @for (int i = 0; i < 4; i++)
+        {
+            if (i < Model.Count)
+            {
+                <div class="container">
+                    <header>
+                        <span class="logo">
+                            <h5>@Model[i].Name</h5>
+                        </span>
+                    </header>
+                    <div class="card-details">
+                        <div class="name-number">
+                            <h6>Balance</h6>
+                            <h5 class="number">@Model[i].MoneyAmount $</h5>
+                            <h5 class="name">@Model[i].Name</h5>
+                        </div>
+                        <div class="valid-date">
+                            <h6>Valid Thru</h6>
+                            <h5>@Model[i].ExpirationDate.ToString("yyyy/MM")</h5>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="container-edit">
+                    <button onclick="location.href='@Url.Action("CreateCard", "Home")'" class="edit" id="editButton">
+                        <img src="~/Template/img/addimage.png" alt="Add Image">
+                    </button>
+                </div>
+            }
+        }
+    </div>
+</body>
+</html>

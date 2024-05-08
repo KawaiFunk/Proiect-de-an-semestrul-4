@@ -112,6 +112,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBModel\Seed\CardsContext.cs" />
     <Compile Include="Sessions\AdminSessionBL.cs" />
     <Compile Include="BussinessLogic.cs" />
     <Compile Include="Core\AdminAPI.cs" />

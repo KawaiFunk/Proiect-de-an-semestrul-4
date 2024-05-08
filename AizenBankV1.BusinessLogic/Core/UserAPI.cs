@@ -14,6 +14,9 @@ using AizenBankV1.Domain.Session;
 using AutoMapper;
 using proiect.Helpers;
 using System.Web.Configuration;
+using AizenBankV1.Domain.Entities.Card;
+using System.Web;
+using AizenBankV1.Web.Models;
 
 namespace AizenBankV1.BusinessLogic.Core
 {
@@ -214,5 +217,62 @@ namespace AizenBankV1.BusinessLogic.Core
             return true;
         }
 
+        public List<CardMinimal> RGetCards(UserMinimal user)
+        {
+            using (var db = new CardsContexts())
+            {
+                List<CardMinimal> cards = new List<CardMinimal>();
+
+                var matchingCards = db.UsersCards.Where(card => card.userID == user.Id).ToList();
+
+                foreach (var cdbCard in matchingCards)
+                {
+                    CardMinimal cardMinimal = ConvertToCardMinimal(cdbCard);
+                    cards.Add(cardMinimal);
+                }
+
+                return cards;
+            }
+        }
+
+        private CardMinimal ConvertToCardMinimal(CardsDBTable cdbCard)
+        {
+            CardMinimal cardMinimal = new CardMinimal();
+            cardMinimal.Name = cdbCard.Name;
+            cardMinimal.UserID = cdbCard.userID;
+            cardMinimal.Description = cdbCard.Description;
+            cardMinimal.ExpirationDate = cdbCard.ExpireDate;
+            cardMinimal.MoneyAmount = cdbCard.MoneyAmount;
+            cardMinimal.CardType = cdbCard.CardType;
+            return cardMinimal;
+        }
+
+        public void RCreateCard(CardMinimal cardInfo, UserMinimal user)
+        {
+            var card = new CardsDBTable
+            {
+                userID = user.Id,
+                Name = cardInfo.Name,
+                MoneyAmount = 0,
+                CardType = CardTypes.Credit,
+                ExpireDate = DateTime.Now.AddYears(4),
+                Description = cardInfo.Description 
+            };
+            using (var db = new CardsContexts()) 
+            {
+                db.UsersCards.Add(card);
+                db.SaveChanges();
+            }
+        }
+        
+        public void RDeposit(DepositData data)
+        {
+            using (var db = new CardsContexts())
+            {
+                var card = db.UsersCards.FirstOrDefault(u => u.Name == data.CardName);
+                card.MoneyAmount += data.Money;
+                db.SaveChanges();
+            }
+        }
     }
 }

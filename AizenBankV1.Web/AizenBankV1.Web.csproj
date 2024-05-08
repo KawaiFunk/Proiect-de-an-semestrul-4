@@ -274,6 +274,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DepositDataModel.cs" />
     <Compile Include="Models\ForgotPassword.cs" />
     <Compile Include="Models\UserData.cs" />
     <Compile Include="Models\UserLogin.cs" />
@@ -304,6 +305,9 @@
     <Content Include="Views\Admin\EditUserInfo.cshtml" />
     <Content Include="Views\Register\ConfirmCode.cshtml" />
     <Content Include="Views\Register\ResetPassword.cshtml" />
+    <Content Include="Views\Home\CreateCard.cshtml" />
+    <Content Include="Views\Home\Deposit.cshtml" />
+    <Content Include="Views\Home\DepositSuccess.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

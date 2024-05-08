@@ -30,6 +30,7 @@ namespace AizenBankV1.Web.Controllers
 
         public ActionResult SignUp(UserRegister registers)
         {
+            ViewBag.ErrorMessage = "";
             if (ModelState.IsValid)
             {
                 URegisterData data = new URegisterData
