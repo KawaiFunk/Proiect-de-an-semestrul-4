@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "UserCards";
+}
+
+@model List<AizenBankV1.Domain.Entities.Card.CardMinimal>
+
+<div class="container-fluid">
+    <!-- User Activity Table -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">User Activity</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Amount</th>
+                            <th>Expire Date</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var activity in Model)
+                        {
+                            <tr>
+                                <td>@activity.Name</td>
+                                <td>@activity.MoneyAmount</td>
+                                <td>@activity.ExpirationDate</td>
+                                <td>@activity.CardType</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

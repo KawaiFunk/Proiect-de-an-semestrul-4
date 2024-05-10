@@ -1,6 +1,7 @@
 ﻿using AizenBankV1.BusinessLogic.Core;
 using AizenBankV1.BusinessLogic.Interfaces;
 using AizenBankV1.Domain.Entities.Card;
+using AizenBankV1.Domain.Entities.History;
 using AizenBankV1.Domain.Entities.Responces;
 using AizenBankV1.Domain.Entities.User;
 using AizenBankV1.Web.Models;
@@ -63,6 +64,26 @@ namespace AizenBankV1.BusinessLogic
         public void Deposit(DepositData data)
         {
             RDeposit(data);
+        }
+        
+        public void Withdraw(DepositData data)
+        {
+            RWithdraw(data);
+        }
+
+        public void LocalTransfer(LocalTransferData data)
+        {
+            RLocalTranfer(data);
+        }
+
+        public void Transfer(TransferData data)
+        {
+            RTransfer(data);
+        }
+
+        public List<HistoryTable> GetHistory(UserMinimal user)
+        {
+            return RGetHistory(user);
         }
     }
 }

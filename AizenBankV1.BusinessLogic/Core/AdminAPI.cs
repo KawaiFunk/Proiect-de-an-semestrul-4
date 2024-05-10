@@ -1,4 +1,6 @@
 ﻿using AizenBankV1.BusinessLogic.DBModel.Seed;
+using AizenBankV1.Domain.Entities.Card;
+using AizenBankV1.Domain.Entities.History;
 using AizenBankV1.Domain.Entities.User;
 using System;
 using System.Collections.Generic;
@@ -68,6 +70,68 @@ namespace AizenBankV1.BusinessLogic.Core
                 dbContext.Users.Remove(user);
                 dbContext.SaveChanges();
             }
+        }
+
+        public List<HistoryTable> RGetHistory(UserMinimal user)
+        {
+            using (var cardsDB = new CardsContexts())
+            {
+                using (var db = new HistoryContext())
+                {
+                    List<HistoryTable> histories = new List<HistoryTable>();
+
+                    List<CardMinimal> userCards = RGetCards(user);
+
+                    foreach (var card in userCards)
+                    {
+                        var matchingHistories = db.Histories
+                            .Where(history => history.Source == card.Name || history.Destination == card.Name)
+                            .ToList();
+
+                        foreach (var history in matchingHistories)
+                        {
+                            if (!histories.Any(h => h.Id == history.Id))
+                            {
+                                histories.Add(history);
+                            }
+                        }
+                    }
+
+                    histories = histories.OrderBy(history => history.DateTime).ToList();
+
+                    return histories;
+                }
+            }
+        }
+
+        public List<CardMinimal> RGetCards(UserMinimal user)
+        {
+            using (var db = new CardsContexts())
+            {
+                List<CardMinimal> cards = new List<CardMinimal>();
+
+                var matchingCards = db.UsersCards.Where(card => card.userID == user.Id).ToList();
+
+                foreach (var cdbCard in matchingCards)
+                {
+                    CardMinimal cardMinimal = ConvertToCardMinimal(cdbCard);
+                    cards.Add(cardMinimal);
+                }
+
+                return cards;
+            }
+        }
+
+        private CardMinimal ConvertToCardMinimal(CardsDBTable cdbCard)
+        {
+            CardMinimal cardMinimal = new CardMinimal();
+            cardMinimal.Name = cdbCard.Name;
+            cardMinimal.UserID = cdbCard.userID;
+            cardMinimal.Description = cdbCard.Description;
+            cardMinimal.ExpirationDate = cdbCard.ExpireDate;
+            cardMinimal.MoneyAmount = cdbCard.MoneyAmount;
+            cardMinimal.CardType = cdbCard.CardType;
+            return cardMinimal;
         }
     }
 }

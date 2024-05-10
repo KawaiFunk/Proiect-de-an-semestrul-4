@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "History";
+}
+
+@model List<AizenBankV1.Domain.Entities.History.HistoryTable>
+
+<div class="container-fluid">
+
+    <!-- Sidebar -->
+    <div class="row">
+
+        <!-- User Table -->
+        <div class="col-md-9">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Users</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Source</th>
+                                    <th>Destination</th>
+                                    <th>Amount</th>
+                                    <th>Type</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var user in Model)
+                                {
+                                    <tr>
+                                        <td>@user.Source</td>
+                                        <td>@user.Destination</td>
+                                        <td>@user.Amount $</td>
+                                        <td>@user.Type</td>
+                                        <td>@user.DateTime</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

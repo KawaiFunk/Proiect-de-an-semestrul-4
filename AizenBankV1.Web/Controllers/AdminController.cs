@@ -75,5 +75,41 @@ namespace AizenBankV1.Web.Controllers
             }
             return RedirectToAction("Tables");
         }
+
+        [AdminModAttributes]
+        [HttpGet]
+        [Route("Admin/UserActivity/{id}")]
+        public ActionResult UserActivity(int id)
+        {
+            SessionStatus();
+            var user = _session.RGetUserById(id);
+            var userActivityFromDB = _session.GetHistory(user);
+            if (userActivityFromDB == null)
+            {
+                return View();
+            }
+            else
+            {
+                return View("UserActivity", userActivityFromDB);
+            }
+        }
+
+        [AdminModAttributes]
+        [HttpGet]
+        [Route("Admin/UserCards/{id}")]
+        public ActionResult UserCards(int id)
+        {
+            SessionStatus();
+            var user = _session.RGetUserById(id);
+            var userActivityFromDB = _session.GetCards(user);
+            if (userActivityFromDB == null)
+            {
+                return View();
+            }
+            else
+            {
+                return View("UserCards", userActivityFromDB);
+            }
+        }
     }
 }

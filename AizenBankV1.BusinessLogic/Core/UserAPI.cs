@@ -17,6 +17,7 @@ using System.Web.Configuration;
 using AizenBankV1.Domain.Entities.Card;
 using System.Web;
 using AizenBankV1.Web.Models;
+using AizenBankV1.Domain.Entities.History;
 
 namespace AizenBankV1.BusinessLogic.Core
 {
@@ -271,7 +272,158 @@ namespace AizenBankV1.BusinessLogic.Core
             {
                 var card = db.UsersCards.FirstOrDefault(u => u.Name == data.CardName);
                 card.MoneyAmount += data.Money;
+                using (var history = new HistoryContext())
+                {
+                    var historityInfo = new HistoryTable
+                    {
+                        Source = "External card",
+                        Destination = card.Name,
+                        Amount = card.MoneyAmount,
+                        DateTime = DateTime.Now,
+                        Type = HistoryType.Deposit
+                    };
+                    history.Histories.Add(historityInfo);
+                    history.SaveChanges();
+                }
+                    db.SaveChanges();
+            }
+        }
+
+        public void RWithdraw(DepositData data)
+        {
+            using (var db = new CardsContexts())
+            {
+                var card = db.UsersCards.FirstOrDefault(u => u.Name == data.CardName);
+                card.MoneyAmount -= data.Money;
+                using (var history = new HistoryContext())
+                {
+                    var historityInfo = new HistoryTable
+                    {
+                        Source = card.Name,
+                        Destination = "External card",
+                        Amount = data.Money,
+                        DateTime = DateTime.Now,
+                        Type = HistoryType.Withdraw
+                    };
+                    history.Histories.Add(historityInfo);
+                    history.SaveChanges();
+                }
                 db.SaveChanges();
+            }
+        }
+
+        public void RLocalTranfer(LocalTransferData data)
+        {
+            using (var db = new CardsContexts())
+            {
+                var sourceCard = db.UsersCards.FirstOrDefault(u => u.Name == data.SourceCardName);
+                var destinationCard = db.UsersCards.FirstOrDefault(u => u.Name == data.DestinationCardName);
+                sourceCard.MoneyAmount -= data.Money;
+                destinationCard.MoneyAmount += data.Money;
+                using (var history = new HistoryContext())
+                {
+                    var historityInfo = new HistoryTable
+                    {
+                        Source = sourceCard.Name,
+                        Destination = destinationCard.Name,
+                        Amount = data.Money,
+                        DateTime = DateTime.Now,
+                        Type = HistoryType.LocalTransfer
+                    };
+                    history.Histories.Add(historityInfo);
+                    history.SaveChanges();
+                }
+                db.SaveChanges();
+            }
+        }
+
+        public void RTransfer(TransferData data)
+        {
+            using (var users = new UserContext())
+            {
+                using (var db = new CardsContexts())
+                {
+                    var sourceCard = db.UsersCards.FirstOrDefault(u => u.Name == data.SourceCard);
+                    var sourceUser = data.SourceEmail;
+                    var destUser = users.Users.FirstOrDefault(u => u.Email == data.DestinationCard);
+                    var destUserMinimal = new UserMinimal
+                    {
+                        Email = destUser.Email,
+                        Id = destUser.Id,
+                        LasIp = destUser.LasIp,
+                        LastLogin = destUser.LastLogin,
+                        Level = destUser.Level,
+                        Password = destUser.Password,
+                        Username = destUser.UserName
+                    };
+                    List<CardMinimal> destCards = RGetCards(destUserMinimal);
+                    if (destCards == null || destCards.Count == 0)
+                    {
+                        throw new InvalidOperationException("Destination user does not have any open cards.");
+                    }
+                    var destCard = destCards[0];
+                    var destCardDB = db.UsersCards.FirstOrDefault(u => u.Name.Equals(destCard.Name));
+                    destCardDB.MoneyAmount += data.Money;
+                    sourceCard.MoneyAmount -= data.Money;
+                    
+                    using (var history = new HistoryContext())
+                    {
+                        var historityInfo = new HistoryTable
+                        {
+                            Source = sourceCard.Name,
+                            Destination = data.DestinationCard,
+                            Amount = data.Money,
+                            DateTime = DateTime.Now,
+                            Type = HistoryType.Transfer
+                        };
+                        history.Histories.Add(historityInfo);
+
+                        var historyDestinationInfo = new HistoryTable
+                        {
+                            Source = sourceUser,
+                            Destination = destCard.Name,
+                            Amount = data.Money,
+                            DateTime = DateTime.Now,
+                            Type = HistoryType.Transfer
+                        };
+                        history.Histories.Add(historyDestinationInfo);
+
+                        history.SaveChanges();
+                    }
+                    db.SaveChanges();
+                } 
+            }  
+        }
+
+        public List<HistoryTable> RGetHistory(UserMinimal user)
+        {
+            using (var cardsDB = new CardsContexts())
+            {
+                using (var db = new HistoryContext())
+                {
+                    List<HistoryTable> histories = new List<HistoryTable>();
+
+                    List<CardMinimal> userCards = RGetCards(user);
+
+                    foreach (var card in userCards)
+                    {
+                        var matchingHistories = db.Histories
+                            .Where(history => history.Source == card.Name || history.Destination == card.Name)
+                            .ToList();
+
+                        foreach (var history in matchingHistories)
+                        {
+                            if (!histories.Any(h => h.Id == history.Id))
+                            {
+                                histories.Add(history);
+                            }
+                        }
+                    }
+
+                    histories = histories.OrderBy(history => history.DateTime).ToList();
+
+                    return histories;
+                }
             }
         }
     }

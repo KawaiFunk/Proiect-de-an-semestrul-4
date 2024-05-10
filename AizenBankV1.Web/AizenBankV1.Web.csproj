@@ -276,6 +276,9 @@
     </Compile>
     <Compile Include="Models\DepositDataModel.cs" />
     <Compile Include="Models\ForgotPassword.cs" />
+    <Compile Include="Models\LocalTransferModel.cs" />
+    <Compile Include="Models\ProfileData.cs" />
+    <Compile Include="Models\TransferModel.cs" />
     <Compile Include="Models\UserData.cs" />
     <Compile Include="Models\UserLogin.cs" />
     <Compile Include="Models\UserRegister.cs" />
@@ -296,8 +299,6 @@
     <Content Include="Views\Shared\_LogoutModal.cshtml" />
     <Content Include="Views\Register\ForgotPassword.cshtml" />
     <Content Include="Views\Home\Profile.cshtml" />
-    <Content Include="Views\Home\ActivityLog.cshtml" />
-    <Content Include="Views\Home\Settings.cshtml" />
     <Content Include="Views\Home\CardsAccounts.cshtml" />
     <Content Include="Views\SignUp\SignUp.cshtml" />
     <Content Include="Views\Admin\Tables.cshtml" />
@@ -308,6 +309,15 @@
     <Content Include="Views\Home\CreateCard.cshtml" />
     <Content Include="Views\Home\Deposit.cshtml" />
     <Content Include="Views\Home\DepositSuccess.cshtml" />
+    <Content Include="Views\Home\Withdraw.cshtml" />
+    <Content Include="Views\Home\WithdrawSucces.cshtml" />
+    <Content Include="Views\Home\LocalTransfer.cshtml" />
+    <Content Include="Views\Home\LocalTransferSucces.cshtml" />
+    <Content Include="Views\Home\Transfer.cshtml" />
+    <Content Include="Views\Home\TransferSucces.cshtml" />
+    <Content Include="Views\Home\History.cshtml" />
+    <Content Include="Views\Admin\UserActivity.cshtml" />
+    <Content Include="Views\Admin\UserCards.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

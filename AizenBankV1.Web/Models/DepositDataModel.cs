@@ -8,7 +8,7 @@ namespace AizenBankV1.Web.Models
 {
     public class DepositDataModel
     {
-        public int Money { get; set; }
+        public double Money { get; set; }
         public string SelectedCardName { get; set; }
         public List<CardMinimal> UserCards { get; set; }
     }

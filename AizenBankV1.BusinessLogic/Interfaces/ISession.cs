@@ -8,6 +8,7 @@ using AizenBankV1.Domain.Entities.User;
 using System.Web;
 using AizenBankV1.Domain.Entities.Card;
 using AizenBankV1.Web.Models;
+using AizenBankV1.Domain.Entities.History;
 
 namespace AizenBankV1.BusinessLogic.Interfaces
 {
@@ -23,5 +24,9 @@ namespace AizenBankV1.BusinessLogic.Interfaces
         List<CardMinimal> GetCards(UserMinimal user);
         void CreateCard(CardMinimal cardInfo, UserMinimal user);
         void Deposit(DepositData data);
+        void Withdraw(DepositData data);
+        void LocalTransfer(LocalTransferData data);
+        void Transfer(TransferData data);
+        List<HistoryTable> GetHistory(UserMinimal user);
     }
 }

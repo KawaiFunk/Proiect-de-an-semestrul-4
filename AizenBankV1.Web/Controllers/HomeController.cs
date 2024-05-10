@@ -33,41 +33,32 @@ namespace AizenBankV1.Web.Controllers
                 return RedirectToAction("LogIn", "Register");
             }
             var user = System.Web.HttpContext.Current.GetMySessionObject();
-            UserData userData = new UserData
-            {
-                Name = user.Username,
-                Email = user.Email
-            };
+            var cards = _session.GetCards(user);
 
-            return View(userData);
+            return View(cards);
         }
 
 
         public ActionResult Profile()
         {
             var user = System.Web.HttpContext.Current.GetMySessionObject();
-            UserData userData = new UserData
+            var cards = _session.GetCards(user);
+            double money = 0;
+            foreach(CardMinimal card in cards)
             {
+                money += card.MoneyAmount;
+            }
+            var profileInfo = new ProfileData
+            {
+                Email = user.Email,
                 Name = user.Username,
-                Email = user.Email
+                OpenCards = cards.Count(),
+                Money = money
             };
-
-            return View(userData);
+            return View(profileInfo);
         }
 
         public ActionResult ActivityLog()
-        {
-            var user = System.Web.HttpContext.Current.GetMySessionObject();
-            UserData userData = new UserData
-            {
-                Name = user.Username,
-                Email = user.Email
-            };
-
-            return View(userData);
-        }
-
-        public ActionResult Settings()
         {
             var user = System.Web.HttpContext.Current.GetMySessionObject();
             UserData userData = new UserData
@@ -114,8 +105,8 @@ namespace AizenBankV1.Web.Controllers
 
             var depositDataModel = new DepositDataModel
             {
-                UserCards = cards, // Initialize UserCards property with actual user cards
-                Money = 0 // Initial value for Money, adjust as needed
+                UserCards = cards,
+                Money = 0
             };
 
             return View(depositDataModel);
@@ -131,13 +122,20 @@ namespace AizenBankV1.Web.Controllers
 
             if (selectedCard != null)
             {
-                var depositData = new DepositData
+                if(data.Money <= 0)
                 {
-                    CardName = selectedCard.Name,
-                    Money = data.Money
-                };
-                _session.Deposit(depositData);
-                return RedirectToAction("DepositSuccess", "Home");
+                    ModelState.AddModelError("Money", "Deposit amount must be greater than zero.");
+                }
+                else
+                {
+                    var depositData = new DepositData
+                    {
+                        CardName = selectedCard.Name,
+                        Money = data.Money
+                    };
+                    _session.Deposit(depositData);
+                    return RedirectToAction("DepositSuccess", "Home");
+                }
             }
             else
             {
@@ -150,6 +148,201 @@ namespace AizenBankV1.Web.Controllers
         public ActionResult DepositSuccess()
         {
             return View();
+        }
+
+        public ActionResult Withdraw()
+        {
+            var currentUser = System.Web.HttpContext.Current.GetMySessionObject();
+            var cards = _session.GetCards(currentUser);
+
+            var depositDataModel = new DepositDataModel
+            {
+                UserCards = cards,
+                Money = 0
+            };
+
+            return View(depositDataModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Withdraw(DepositDataModel data)
+        {
+            var currentUser = System.Web.HttpContext.Current.GetMySessionObject();
+            data.UserCards = _session.GetCards(currentUser);
+            var selectedCard = data.UserCards.FirstOrDefault(c => c.Name == data.SelectedCardName);
+
+            if (selectedCard != null)
+            {
+                if(data.Money <= 0)
+                {
+                    ModelState.AddModelError("Money", "Withdrawal amount must be greater than zero.");
+                }
+                else if (data.Money > selectedCard.MoneyAmount)
+                {
+                    ModelState.AddModelError("Money", "Insufficient balance for withdrawal.");
+                }
+                else
+                {
+                    var depositData = new DepositData
+                    {
+                        CardName = selectedCard.Name,
+                        Money = data.Money
+                    };
+                    _session.Withdraw(depositData);
+                    return RedirectToAction("WithdrawSucces", "Home");
+                }
+                
+                
+            }
+            else
+            {
+                ModelState.AddModelError("SelectedCardName", "Selected card not found.");
+            }
+
+            return View(data);
+        }
+
+        public ActionResult WithdrawSucces()
+        {
+            return View();
+        }
+
+        public ActionResult LocalTransfer()
+        {
+            var currentUser = System.Web.HttpContext.Current.GetMySessionObject();
+            var cards = _session.GetCards(currentUser);
+            var transferInfo = new LocalTransferModel
+            {
+                Cards = cards,
+                Money = 0
+            };
+            return View(transferInfo);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult LocalTransfer(LocalTransferModel transferInfo)
+        {
+            var currentUser = System.Web.HttpContext.Current.GetMySessionObject();
+            transferInfo.Cards = _session.GetCards(currentUser);
+            var sourceCard = transferInfo.Cards.FirstOrDefault(c => c.Name == transferInfo.SourceCard);
+            var destinationCard = transferInfo.Cards.FirstOrDefault(c => c.Name == transferInfo.DestinationCard);
+
+            if (sourceCard != null && destinationCard != null && (sourceCard != destinationCard))
+            {
+                if (transferInfo.Money <= 0)
+                {
+                    ModelState.AddModelError("Money", "Transfer amount must be greater than zero.");
+                }
+                else if (transferInfo.Money > sourceCard.MoneyAmount)
+                {
+                    ModelState.AddModelError("Money", "Insufficient balance for transfer.");
+                }
+                else
+                {
+                    var transferData = new LocalTransferData
+                    {
+                        SourceCardName = sourceCard.Name,
+                        DestinationCardName = destinationCard.Name,
+                        Money = transferInfo.Money
+                    };
+                    _session.LocalTransfer(transferData);
+                    return RedirectToAction("LocalTransferSucces", "Home");
+                }
+
+
+            }
+            else
+            {
+                ModelState.AddModelError("SourceCard", "Selected card not found or cards cannot be the same");
+            }
+
+            return View(transferInfo);
+        }
+
+        public ActionResult LocalTransferSucces()
+        {
+            return View();
+        }
+
+        public ActionResult Transfer()
+        {
+            var currentUser = System.Web.HttpContext.Current.GetMySessionObject();
+            var cards = _session.GetCards(currentUser);
+            var transferInfo = new TransferModel
+            {
+                Cards = cards,
+                Money = 0
+            };
+            return View(transferInfo);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Transfer(TransferModel transferInfo)
+        {
+            var currentUser = System.Web.HttpContext.Current.GetMySessionObject();
+            transferInfo.Cards = _session.GetCards(currentUser);
+            var sourceCard = transferInfo.Cards.FirstOrDefault(c => c.Name == transferInfo.SourceCard);
+            var destinationCard = transferInfo.DestinatorEmail;
+
+            try
+            {
+                if (sourceCard != null && _session.UserExists(destinationCard))
+                {
+                    // Check if the transfer amount is valid
+                    if (transferInfo.Money <= 0)
+                    {
+                        ModelState.AddModelError("Money", "Transfer amount must be greater than zero.");
+                    }
+                    else if (transferInfo.Money > sourceCard.MoneyAmount)
+                    {
+                        ModelState.AddModelError("Money", "Insufficient balance for transfer.");
+                    }
+                    else
+                    {
+                        var transferData = new TransferData
+                        {
+                            SourceCard = sourceCard.Name,
+                            DestinationCard = destinationCard,
+                            Money = transferInfo.Money,
+                            SourceEmail = currentUser.Email
+                        };
+                        _session.Transfer(transferData);
+                        return RedirectToAction("TransferSucces", "Home");
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("SourceCard", "Selected card not found or destination user does not exist.");
+                }
+            }
+            catch (InvalidOperationException ex)
+            {
+                ModelState.AddModelError("",ex.Message);
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError("", "An error occurred during the transfer process.");
+            }
+
+            return View(transferInfo);
+        }
+
+
+
+
+        public ActionResult TransferSucces()
+        {
+            return View();
+        }
+
+        public ActionResult History()
+        {
+            var currentUser = System.Web.HttpContext.Current.GetMySessionObject();
+            var history = _session.GetHistory(currentUser);
+            return View(history);
         }
 
     }

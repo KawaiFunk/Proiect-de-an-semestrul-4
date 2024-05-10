@@ -1,5 +1,7 @@
 ﻿using AizenBankV1.BusinessLogic.Core;
 using AizenBankV1.BusinessLogic.Interfaces;
+using AizenBankV1.Domain.Entities.Card;
+using AizenBankV1.Domain.Entities.History;
 using AizenBankV1.Domain.Entities.User;
 using System;
 using System.Collections.Generic;
@@ -29,6 +31,15 @@ namespace AizenBankV1.BusinessLogic
         public void DeleteUser(int id)
         {
             RDeleteUser(id);
+        }
+
+        public List<HistoryTable> GetHistory(UserMinimal user)
+        {
+            return RGetHistory(user);
+        }
+        public List<CardMinimal> GetCards(UserMinimal user)
+        {
+            return RGetCards(user);
         }
     }
 }

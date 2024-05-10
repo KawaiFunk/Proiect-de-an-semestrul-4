@@ -25,9 +25,14 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion sidebarthing" id="accordionSidebar">
             @Html.Partial("_Sidebar")
         </ul>
+        <style>
+            .sidebarthing{
+                z-index:1;
+            }
+        </style>
         <!-- End of Sidebar -->
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -44,11 +49,20 @@
                     @RenderBody()
             <!-- End of Main Content -->
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <footer class="sticky-footer bg-white footerthing">
                 @Html.Partial("_Footer")
             </footer>
             <!-- End of Footer -->
-
+                <style>
+                    .footerthing {
+                        position: fixed;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        text-align: center;
+                        z-index: 0;
+                    }
+                </style>
         </div>
         <!-- End of Content Wrapper -->
 

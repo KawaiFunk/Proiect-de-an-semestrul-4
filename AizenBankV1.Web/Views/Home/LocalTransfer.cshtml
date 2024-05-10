@@ -1,0 +1,139 @@
+﻿@{
+    ViewBag.Title = "LoaclTransfer";
+}
+
+@model AizenBankV1.Web.Models.LocalTransferModel
+
+@Html.ValidationSummary(true)
+@using (Html.BeginForm("LocalTransfer", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <form method="post">
+        <div class="container p-0">
+            <div class="card px-4">
+                <p class="h8 py-3">Transfer Details</p>
+                <div class="row gx-3">
+                    <div class="col-6">
+                        @Html.DropDownListFor(u => u.SourceCard, new SelectList(Model.Cards, "Name", "Name"), "Source Card", new { @class = "form-control mb-3 pt-2 amount cardscards", id = "SourceCard" })
+                        @Html.ValidationMessageFor(m => m.SourceCard, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-6">
+                        @Html.DropDownListFor(m => m.DestinationCard, new SelectList(Model.Cards, "Name", "Name"), "Destination Card", new { @class = "d-flex flex-column form-control mb-3 pt-2 cardscards", id = "DestinationCard" })
+                        @Html.ValidationMessageFor(m => m.DestinationCard, "", new { @class = "text-danger" })
+                    </div>
+                    <label>Amount:</label> 
+                    <br>
+                    <div>
+                        @Html.TextBoxFor(m => m.Money, new { @class = "form-control mb-3 pt-2 amount", placeholder = "Amount" })
+                        @Html.ValidationMessageFor(m => m.Money, "", new { @class = "text-danger" })
+                    </div>
+
+
+                    <button type="submit" class="col-12 btn btn-primary mb-3">Confirm</button>
+                </div>
+                </div>
+            </div>
+    </form>
+}
+
+
+<style>
+    .cardscards {
+        margin-left: 15px;
+    }
+
+    .dropdown-cards {
+        background-color: aqua;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    label {
+        margin-left: 10px;
+    }
+
+    .amount {
+        margin-left: 13px;
+    }
+
+    body {
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .card {
+        max-width: 500px;
+        margin: auto;
+        color: black;
+        border-radius: 20 px;
+    }
+
+    p {
+        margin: 0px;
+    }
+
+    .container .h8 {
+        font-size: 30px;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    .btn.btn-primary {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        background-image: linear-gradient(90deg,#9A3B3B 10%,#224abe 100%);
+        border: none;
+        transition: 0.5s;
+        background-size: 200% auto;
+    }
+
+
+    .btn.btn.btn-primary:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+    }
+
+
+
+    .btn.btn-primary:hover .fas.fa-arrow-right {
+        transform: translate(15px);
+        transition: transform 0.2s ease-in;
+    }
+
+    .form-control {
+        color: white;
+        background-color: #231011;
+        border: 2px solid transparent;
+        height: 60px;
+        padding-left: 20px;
+        vertical-align: middle;
+    }
+
+        .form-control:focus {
+            color: white;
+            background-color: #600c10;
+            border: 2px solid #920d0d;
+            box-shadow: none;
+        }
+
+    .text {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    ::placeholder {
+        font-size: 14px;
+        font-weight: 600;
+    }
+</style>
