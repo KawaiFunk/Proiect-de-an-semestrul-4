@@ -1,4 +1,5 @@
 ﻿using AizenBankV1.BusinessLogic.Core;
+using AizenBankV1.BusinessLogic.DBModel.Seed;
 using AizenBankV1.BusinessLogic.Interfaces;
 using AizenBankV1.Domain.Entities.Card;
 using AizenBankV1.Domain.Entities.History;
@@ -40,6 +41,10 @@ namespace AizenBankV1.BusinessLogic
         public List<CardMinimal> GetCards(UserMinimal user)
         {
             return RGetCards(user);
+        }
+        public void BlockCard(int card)
+        {
+            RBlockCard(card);
         }
     }
 }

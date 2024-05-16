@@ -239,6 +239,7 @@ namespace AizenBankV1.BusinessLogic.Core
         private CardMinimal ConvertToCardMinimal(CardsDBTable cdbCard)
         {
             CardMinimal cardMinimal = new CardMinimal();
+            cardMinimal.Id = cdbCard.Id;
             cardMinimal.Name = cdbCard.Name;
             cardMinimal.UserID = cdbCard.userID;
             cardMinimal.Description = cdbCard.Description;

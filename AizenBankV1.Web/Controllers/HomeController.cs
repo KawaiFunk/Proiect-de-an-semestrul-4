@@ -108,7 +108,6 @@ namespace AizenBankV1.Web.Controllers
                 UserCards = cards,
                 Money = 0
             };
-
             return View(depositDataModel);
         }
 
@@ -122,9 +121,14 @@ namespace AizenBankV1.Web.Controllers
 
             if (selectedCard != null)
             {
-                if(data.Money <= 0)
+                if (selectedCard.Name == "[Blocked Card]")
                 {
-                    ModelState.AddModelError("Money", "Deposit amount must be greater than zero.");
+                    return RedirectToAction("Failed", "Home");
+                }
+
+                if (!decimal.TryParse(data.Money.ToString(), out decimal money) || money <= 0)
+                {
+                    ModelState.AddModelError("Money", "Amount must be greater than 0");
                 }
                 else
                 {
@@ -174,9 +178,15 @@ namespace AizenBankV1.Web.Controllers
 
             if (selectedCard != null)
             {
-                if(data.Money <= 0)
+                if (selectedCard.Name == "[Blocked Card]")
                 {
-                    ModelState.AddModelError("Money", "Withdrawal amount must be greater than zero.");
+                    return RedirectToAction("Failed", "Home");
+                }
+
+
+                if (!decimal.TryParse(data.Money.ToString(), out decimal money) || money <= 0)
+                {
+                    ModelState.AddModelError("Money", "Amount must be greater than 0");
                 }
                 else if (data.Money > selectedCard.MoneyAmount)
                 {
@@ -231,9 +241,14 @@ namespace AizenBankV1.Web.Controllers
 
             if (sourceCard != null && destinationCard != null && (sourceCard != destinationCard))
             {
-                if (transferInfo.Money <= 0)
+                if (sourceCard.Name == "[Blocked Card]" || destinationCard.Name == "[Blocked Card]")
                 {
-                    ModelState.AddModelError("Money", "Transfer amount must be greater than zero.");
+                    return RedirectToAction("Failed", "Home");
+                }
+
+                if (!decimal.TryParse(transferInfo.Money.ToString(), out decimal money) || money <= 0)
+                {
+                    ModelState.AddModelError("Money", "Amount must be greater than 0");
                 }
                 else if (transferInfo.Money > sourceCard.MoneyAmount)
                 {
@@ -291,10 +306,14 @@ namespace AizenBankV1.Web.Controllers
             {
                 if (sourceCard != null && _session.UserExists(destinationCard))
                 {
-                    // Check if the transfer amount is valid
-                    if (transferInfo.Money <= 0)
+                    if (sourceCard.Name == "[Blocked Card]")
                     {
-                        ModelState.AddModelError("Money", "Transfer amount must be greater than zero.");
+                        return RedirectToAction("Failed", "Home");
+                    }
+
+                    if (!decimal.TryParse(transferInfo.Money.ToString(), out decimal money) || money <= 0)
+                    {
+                        ModelState.AddModelError("Money", "Amount must be greater than 0");
                     }
                     else if (transferInfo.Money > sourceCard.MoneyAmount)
                     {
@@ -330,9 +349,6 @@ namespace AizenBankV1.Web.Controllers
             return View(transferInfo);
         }
 
-
-
-
         public ActionResult TransferSucces()
         {
             return View();
@@ -343,6 +359,11 @@ namespace AizenBankV1.Web.Controllers
             var currentUser = System.Web.HttpContext.Current.GetMySessionObject();
             var history = _session.GetHistory(currentUser);
             return View(history);
+        }
+
+        public ActionResult Failed()
+        {
+            return View();
         }
 
     }

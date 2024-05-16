@@ -318,6 +318,7 @@
     <Content Include="Views\Home\History.cshtml" />
     <Content Include="Views\Admin\UserActivity.cshtml" />
     <Content Include="Views\Admin\UserCards.cshtml" />
+    <Content Include="Views\Home\Failed.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

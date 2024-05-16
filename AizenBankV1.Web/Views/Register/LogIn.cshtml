@@ -45,7 +45,7 @@
                                 <form method="post">
 
                                     <label for="Credential">Username</label>
-                                    @Html.TextBoxFor(UserLogin => UserLogin.Credentials, new { @class = "form-control", placeholder = "Email or Phone", maxlength = "20" })
+                                    @Html.TextBoxFor(UserLogin => UserLogin.Credentials, new { @class = "form-control", placeholder = "Email or Phone", maxlength = "40" })
                                     @Html.ValidationMessageFor(UserLogin => UserLogin.Credentials, "", new { @class = "text-danger" })
 
                                     <label for="Password">Password</label>

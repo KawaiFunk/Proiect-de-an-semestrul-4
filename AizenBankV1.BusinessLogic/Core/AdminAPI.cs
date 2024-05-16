@@ -125,6 +125,7 @@ namespace AizenBankV1.BusinessLogic.Core
         private CardMinimal ConvertToCardMinimal(CardsDBTable cdbCard)
         {
             CardMinimal cardMinimal = new CardMinimal();
+            cardMinimal.Id = cdbCard.Id;
             cardMinimal.Name = cdbCard.Name;
             cardMinimal.UserID = cdbCard.userID;
             cardMinimal.Description = cdbCard.Description;
@@ -132,6 +133,19 @@ namespace AizenBankV1.BusinessLogic.Core
             cardMinimal.MoneyAmount = cdbCard.MoneyAmount;
             cardMinimal.CardType = cdbCard.CardType;
             return cardMinimal;
+        }
+
+        public void RBlockCard(int id)
+        {
+            using (var db = new CardsContexts())
+            {
+                var userCard = db.UsersCards.FirstOrDefault(u => u.Id == id);
+                if (userCard != null)
+                {
+                    userCard.Name = "[Blocked Card]";
+                    db.SaveChanges();
+                }
+            }
         }
     }
 }

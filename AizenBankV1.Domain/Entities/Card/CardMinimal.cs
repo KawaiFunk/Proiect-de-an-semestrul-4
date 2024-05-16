@@ -10,6 +10,7 @@ namespace AizenBankV1.Domain.Entities.Card
 {
     public class CardMinimal
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public DateTime ExpirationDate { get; set; }
         public double MoneyAmount { get; set; }

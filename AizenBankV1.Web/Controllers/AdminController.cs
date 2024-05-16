@@ -1,5 +1,6 @@
 ﻿using AizenBankV1.BusinessLogic;
 using AizenBankV1.BusinessLogic.Interfaces;
+using AizenBankV1.Domain.Entities.Card;
 using AizenBankV1.Domain.Entities.User;
 using AizenBankV1.Web.AdminAttributes;
 using System;
@@ -12,7 +13,6 @@ namespace AizenBankV1.Web.Controllers
 {
     public class AdminController : BaseController
     {
-        // GET: Admin
         private readonly ISessionAdmin _session;
 
         public AdminController()
@@ -110,6 +110,21 @@ namespace AizenBankV1.Web.Controllers
             {
                 return View("UserCards", userActivityFromDB);
             }
+        }
+
+        [AdminModAttributes]
+        [HttpPost]
+        [Route("Admin/BlockCard/{id}")]
+        [ValidateAntiForgeryToken]
+        public ActionResult BlockCard(int id)
+        {
+            SessionStatus();
+            if (ModelState.IsValid)
+            {
+                _session.BlockCard(id);
+                return RedirectToAction("Tables");
+            }
+            return RedirectToAction("Tables");
         }
     }
 }

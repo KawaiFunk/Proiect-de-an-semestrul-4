@@ -17,5 +17,6 @@ namespace AizenBankV1.BusinessLogic.Interfaces
         void DeleteUser(int id);
         List<HistoryTable> GetHistory(UserMinimal user);
         List<CardMinimal> GetCards(UserMinimal user);
+        void BlockCard(int card);
     }
 }
